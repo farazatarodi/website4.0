@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400&display=swap');
+
+body {
+  background: #282c34;
+  font-family: 'Roboto Mono', monospace;
+}
+
+.container {
+  height: 100vh;
+}
+
+.bar {
+  background: #00ffcc;
+  width: 3px;
+  height: 100%;
+  position: absolute;
+  left: 15%;
+  top: 25%;
+}
+
+section {
+  height: 100vh;
+}
+
+.name {
+  color: white;
+  font-size: 5rem;
+  position: absolute;
+  left: 20%;
+  top: 30%;
+}
+
+.typing {
+  width: 11ch;
+  animation: typing 1.5s steps(11), blink 0.5s step-end infinite alternate,
+    back 0.5s steps(2) 1.5s forwards;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+  font-family: monospace;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+
+@keyframes back {
+  from {
+    overflow: visible;
+  }
+  to {
+    width: 9ch;
+    overflow: visible;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+.drop-down {
+  position: absolute;
+  left: 41%;
+  top: 42%;
+  border: 2px solid;
+  border-color: black;
+  background: rgba(0, 0, 0, 0.1);
+  color: rgba(255, 255, 255, 0.1);
+  height: 0%;
+  overflow: hidden;
+  visibility: hidden;
+  animation: drop 0.2s linear 2.2s forwards;
+}
+
+.drop-down h1 {
+  font-size: 5rem;
+  padding: 0 1rem;
+  font-weight: 300;
+}
+
+.drop-down .selected {
+  color: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.1);
+  font-weight: 400;
+}
+
+@keyframes drop {
+  from {
+    height: 0;
+  }
+  to {
+    height: 30rem;
+    visibility: visible;
+  }
+}
