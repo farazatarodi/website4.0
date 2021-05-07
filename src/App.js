@@ -16,6 +16,7 @@ function App() {
               <img
                 src={wrench}
                 style={{ height: '5rem', filter: 'invert(0.8)' }}
+                alt=""
               ></img>
               developer
             </h1>
