@@ -1,56 +1,123 @@
+@import url('https://use.typekit.net/gki0kgr.css');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
 body {
-  background: #282c34;
-  font-family: 'Roboto Mono', monospace;
+  background: #2c282d;
+  --one-top: 20%;
+  --drop-top: calc(var(--one-top) + 4rem);
+  --c1: #00ffcc;
+  --c2: #ff5454;
 }
 
-.container {
+.scroll-container {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
   height: 100vh;
 }
 
-.bar {
-  background: #00ffcc;
-  width: 3px;
-  height: 100%;
-  position: absolute;
-  left: 15%;
-  top: 25%;
+.one {
+  font-family: 'Roboto';
+  font-weight: 400;
+  font-style: normal;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 section {
-  height: 100vh;
+  position: relative;
+  height: 100%;
+  scroll-snap-align: start;
+}
+
+.header {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  letter-spacing: 0.2rem;
+  position: absolute;
+  top: 0;
+}
+
+.sec1 {
+  height: 100%;
+  width: 30%;
+  display: flex;
+  padding: 0 3rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sec1 a {
+  position: relative;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.sec1 > a:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background: white;
+  visibility: hidden;
+  border-radius: 5px;
+  transform: scaleX(0);
+  transition: 0.2s linear;
+}
+
+.sec1 > a:hover:before {
+  visibility: visible;
+  transform: scaleX(1);
+}
+
+.sec2 {
+  position: relative;
+  width: 70%;
+  height: 100%;
+  font-size: 1rem;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
+.sec2 div {
+  position: absolute;
+  right: 3rem;
 }
 
 .name {
   color: white;
-  font-size: 5rem;
-  position: absolute;
-  left: 20%;
-  top: 30%;
+  font-size: 9rem;
+  font-weight: 700;
+  letter-spacing: -0.03ch;
+}
+
+.title {
+  font-family: Consolas, courier-std, monospace !important;
+  font-size: 4rem;
+  color: var(--c2);
 }
 
 .typing {
   width: 11ch;
-  animation: typing 1.5s steps(11), blink 0.5s step-end infinite alternate,
-    back 0.5s steps(2) 1.5s forwards;
+  animation: typing 1.5s steps(11), blink 0.5s step-end infinite alternate;
   white-space: nowrap;
   overflow: hidden;
   border-right: 3px solid;
-  font-family: monospace;
+  border-color: white;
 }
 
 @keyframes typing {
   from {
     width: 0;
-  }
-}
-
-@keyframes back {
-  from {
-    overflow: visible;
-  }
-  to {
-    width: 9ch;
-    overflow: visible;
   }
 }
 
@@ -60,38 +127,24 @@ section {
   }
 }
 
-.drop-down {
+.scroll-animation {
   position: absolute;
-  left: 41%;
-  top: 42%;
-  border: 2px solid;
-  border-color: black;
-  background: rgba(0, 0, 0, 0.1);
-  color: rgba(255, 255, 255, 0.1);
-  height: 0%;
-  overflow: hidden;
-  visibility: hidden;
-  animation: drop 0.2s linear 2.2s forwards;
+  bottom: 0%;
+  left: 50%;
+  opacity: 0;
+  transform: translate(-50%, -110%);
+  animation: spin 1.5s ease-out infinite;
+  height: 2rem;
+  filter: invert(1);
 }
 
-.drop-down h1 {
-  font-size: 5rem;
-  padding: 0 1rem;
-  font-weight: 300;
-}
-
-.drop-down .selected {
-  color: rgba(255, 255, 255, 0.8);
-  background: rgba(255, 255, 255, 0.1);
-  font-weight: 400;
-}
-
-@keyframes drop {
-  from {
-    height: 0;
+@keyframes spin {
+  100% {
+    transform: translate(-50%, -70%);
+    opacity: 1;
   }
-  to {
-    height: 30rem;
-    visibility: visible;
-  }
+}
+
+.two {
+  color: white;
 }

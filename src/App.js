@@ -1,32 +1,32 @@
 import './App.css';
-import wrench from './wrench.png';
+import scroll from './down-arrow.png';
 
 function App() {
   return (
     <div className="App">
-      <div className="container">
-        <section className="one">
-          <div className="name typing">
-            <span>faraz.</span>
-            <span style={{ color: '#00FFCC' }}>is()</span>
-            <span>;</span>
+      <div className="scroll-container">
+        <section className="one" id="home">
+          <div className="header">
+            <div className="sec1">
+              <a href="#home">HOME</a>
+              <a href="#about">ABOUT</a>
+              <a href="#projects">PROJECTS</a>
+              <a href="#contact">CONTACT</a>
+            </div>
+            <div className="sec2">
+              <div>LEUVEN - BELGIUM</div>
+            </div>
           </div>
-          <div className="drop-down">
-            <h1 className="selected">
-              <img
-                src={wrench}
-                style={{ height: '5rem', filter: 'invert(0.8)' }}
-                alt=""
-              ></img>
-              developer
-            </h1>
-            <h1>awesome</h1>
-            <h1>cool</h1>
-            <h1>handsome</h1>
+          <div className="name">Faraz Atarodi</div>
+          <div className="title typing">
+            {'{'}
+            <span style={{ color: '#00ffcc' }}>developer</span>
+            {'}'}
           </div>
+          <img src={scroll} className="scroll-animation" alt=""></img>
         </section>
+        <section className="two" id="about"></section>
       </div>
-      <div className="bar"></div>
     </div>
   );
 }
