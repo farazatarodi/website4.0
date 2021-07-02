@@ -186,3 +186,9 @@ canvas {
     background-image: url('1.png');
   }
 }
+
+@keyframes ogbg {
+  100% {
+    background-image: url('3.png');
+  }
+}
