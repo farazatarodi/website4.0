@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
 
 body {
-  background: #2c282d;
+  background: #141414;
   --one-top: 20%;
   --drop-top: calc(var(--one-top) + 4rem);
   --c1: #00ffcc;
@@ -93,6 +93,15 @@ section {
   right: 3rem;
 }
 
+canvas {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
 .name {
   color: white;
   font-size: 9rem;
@@ -147,4 +156,33 @@ section {
 
 .two {
   color: white;
+}
+
+.doggo-div {
+  position: absolute;
+  width: 100%;
+  bottom: 5rem;
+}
+
+.doggo {
+  width: 6rem;
+  height: 5rem;
+  position: absolute;
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: left 1s linear;
+  transform: translateX(50%) scaleX(1);
+  background-image: url('0.png');
+}
+
+@keyframes bg {
+  0% {
+    background-image: url('1.png');
+  }
+  50% {
+    background-image: url('2.png');
+  }
+  100% {
+    background-image: url('1.png');
+  }
 }
