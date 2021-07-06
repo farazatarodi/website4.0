@@ -1,0 +1,58 @@
+.one {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.name {
+  color: white;
+  font-size: 9rem;
+  font-weight: 700;
+  letter-spacing: -0.03ch;
+}
+
+.title {
+  font-family: Consolas, courier-std, monospace !important;
+  font-size: 4rem;
+  color: var(--c2);
+}
+
+.typing {
+  width: 11ch;
+  animation: typing 1.5s steps(11), blink 0.5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+  border-color: white;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+.scroll-animation {
+  position: absolute;
+  top: 50%;
+  right: 0%;
+  opacity: 0;
+  transform: translate(-110%, -50%) rotate(-90deg);
+  animation: spin 1.5s ease-out infinite;
+  height: 2rem;
+  filter: invert(1);
+}
+
+@keyframes spin {
+  100% {
+    transform: translate(-70%, -50%) rotate(-90deg);
+    opacity: 1;
+  }
+}

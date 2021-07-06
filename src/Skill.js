@@ -1,5 +1,18 @@
+import c from './media/logos/c.png';
+import c2 from './media/logos/c#.png';
+import css from './media/logos/css.png';
+import html from './media/logos/html.png';
+import java from './media/logos/java.png';
+import js from './media/logos/js.png';
+import php from './media/logos/php.png';
+import python from './media/logos/python.png';
+import react from './media/logos/react.png';
+import unity from './media/logos/unity.png';
+import vba from './media/logos/vba.png';
+
 const Skill = ({ id }) => {
   var text = '';
+  var logoSrc = c;
   if (id === 'C1') {
     text = 'C/C++';
   } else if (id === 'C2') {
@@ -7,34 +20,65 @@ const Skill = ({ id }) => {
   } else {
     text = id;
   }
+
+  if (id === 'C1') {
+    logoSrc = c;
+  } else if (id === 'C2') {
+    logoSrc = c2;
+  } else if (id === 'CSS') {
+    logoSrc = css;
+  } else if (id === 'HTML') {
+    logoSrc = html;
+  } else if (id === 'Java') {
+    logoSrc = java;
+  } else if (id === 'JavaScript') {
+    logoSrc = js;
+  } else if (id === 'PHP') {
+    logoSrc = php;
+  } else if (id === 'Python') {
+    logoSrc = python;
+  } else if (id === 'React') {
+    logoSrc = react;
+  } else if (id === 'Unity') {
+    logoSrc = unity;
+  } else if (id === 'VBA') {
+    logoSrc = vba;
+  }
+
   return (
-    <div>
-      <span
-        id={id}
-        onMouseOver={() => {
-          const skill = document.querySelector('#' + id);
+    <span
+      id={id}
+      onMouseOver={() => {
+        const skill = document.querySelector('#' + id);
+        const logo = document.querySelector('.logo');
 
-          skill.style.transform = 'scale(1.2, 1.2)';
-        }}
-        onMouseLeave={() => {
-          const skill = document.querySelector('#' + id);
-          skill.style.transform = 'scale(1, 1)';
+        // increase scale on hover
+        skill.style.transform = 'scale(1.2, 1.2)';
 
-          const logo = document.querySelector('.logo');
+        // set logo image
+        logo.src = logoSrc;
+      }}
+      onMouseLeave={() => {
+        const skill = document.querySelector('#' + id);
 
-          logo.style.display = 'none';
-        }}
-        onMouseMove={(e) => {
-          const logo = document.querySelector('.logo');
+        // decrease scale on leave
+        skill.style.transform = 'scale(1, 1)';
 
-          logo.style.display = 'block';
-          logo.style.left = e.pageX + 'px';
-          logo.style.top = e.pageY + 'px';
-        }}
-      >
-        {text}
-      </span>
-    </div>
+        // hide logo cursor
+        const logo = document.querySelector('.logo');
+        logo.style.display = 'none';
+      }}
+      onMouseMove={(e) => {
+        const logo = document.querySelector('.logo');
+
+        // show and move logo cursor
+        logo.style.display = 'block';
+        logo.style.left = e.pageX + 'px';
+        logo.style.top = e.pageY + 'px';
+      }}
+    >
+      {text}
+    </span>
   );
 };
 

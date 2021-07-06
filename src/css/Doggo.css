@@ -1,0 +1,55 @@
+.doggo-div {
+  position: absolute;
+  width: 300%;
+  height: 20vh;
+  bottom: 0%;
+  cursor: none;
+  background-image: url('../media/ground.png');
+  background-repeat: repeat-x;
+  background-position: bottom left;
+}
+
+.doggo {
+  width: 6rem;
+  height: 5rem;
+  position: absolute;
+  bottom: 2rem;
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: left 1s linear;
+  transform: translateX(50%) scaleX(1);
+  background-image: url('../media/0.png');
+}
+
+@keyframes bg {
+  0% {
+    background-image: url('../media/1.png');
+  }
+  50% {
+    background-image: url('../media/2.png');
+  }
+  100% {
+    background-image: url('../media/1.png');
+  }
+}
+
+@keyframes ogbg {
+  100% {
+    background-image: url('../media/0.png');
+  }
+}
+
+.ground {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem;
+  z-index: -1;
+}
+
+.bone {
+  position: absolute;
+  visibility: hidden;
+  width: 2rem;
+  transform: translate(-50%, -50%);
+}

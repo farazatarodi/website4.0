@@ -1,8 +1,14 @@
-import './App.css';
+import './css/App.css';
+import './css/Doggo.css';
+import './css/One.css';
+import './css/Two.css';
+import './css/Three.css';
 import scroll from './media/down-arrow.png';
 import Doggo from './Doggo';
 import Skill from './Skill';
-import python from './media/python.png';
+import Edu from './Edu';
+import python from './media/logos/python.png';
+import Project from './Project.js';
 
 // scroll direction function
 var oldLeft = 0;
@@ -65,8 +71,8 @@ const scrollDirection = () => {
   // Set timer for sitting position photo
   walkTimer = setTimeout(() => {
     if (
-      doggo.offsetLeft === (curSec + 0.95) * window.innerWidth ||
-      doggo.offsetLeft === (curSec + 0.05) * window.innerWidth
+      doggo.offsetLeft === Math.ceil((curSec + 0.95) * window.innerWidth) ||
+      doggo.offsetLeft === Math.ceil((curSec + 0.05) * window.innerWidth)
     ) {
       doggo.style.animation = 'ogbg 0s linear';
     }
@@ -79,21 +85,21 @@ function App() {
     <div className="App">
       {/* container for scroll snap */}
       <div className="scroll-container" onScroll={scrollDirection}>
+        {/* Header */}
+        <div className="header">
+          <div className="sec1">
+            <a href="#home">HOME</a>
+            <a href="#about">ABOUT</a>
+            <a href="#projects">PROJECTS</a>
+            <a href="#contact">CONTACT</a>
+          </div>
+          <div className="sec2">
+            <div>LEUVEN - BELGIUM</div>
+          </div>
+        </div>
+
         {/* 1. Home section */}
         <section className="one" id="home">
-          {/* Header */}
-          <div className="header">
-            <div className="sec1">
-              <a href="#home">HOME</a>
-              <a href="#about">ABOUT</a>
-              <a href="#projects">PROJECTS</a>
-              <a href="#contact">CONTACT</a>
-            </div>
-            <div className="sec2">
-              <div>LEUVEN - BELGIUM</div>
-            </div>
-          </div>
-
           {/* Content */}
           <div className="name">Faraz Atarodi</div>
           <div className="title typing">
@@ -134,16 +140,6 @@ function App() {
             </div>
           </div>
           <div className="about2">
-            <div className="edu">
-              <div className="edu-title">Education</div>
-              <div className="bsc">
-                B.Sc. in Mechatronics Engineering from Sharif University of
-                Technology
-              </div>
-              <div className="msc">
-                M.Sc. in Electromechanical Engineering from KU Leuven
-              </div>
-            </div>
             <div className="skills-wrapper">
               <div className="skills-title">Skills</div>
               <div className="skills">
@@ -166,10 +162,38 @@ function App() {
                 <Skill id="VBA" />
                 <span> - </span>
                 <Skill id="C2" />
+                <span> - </span>
+                <Skill id="Unity" />
               </div>
+            </div>
+
+            <div className="edu">
+              <div className="edu-title">Education</div>
+              <Edu id="Sharif" />
+              <Edu id="KUL" />
             </div>
           </div>
           <img src={python} alt="" className="logo" />
+        </section>
+        <section className="three" id="projects">
+          <div className="project-wrapper">
+            <Project id="iran" />
+            <Project id="4" />
+            <Project id="bb" />
+            <Project id="robot" />
+            <Project id="2" />
+            <Project id="task" />
+            <Project id="mc" />
+            <Project id="siemens" />
+            <Project id="os" />
+            <Project id="ha" />
+            <Project id="disk" />
+            <Project id="av" />
+            <Project id="vision" />
+            <Project id="qr" />
+            <Project id="iot" />
+            <Project id="balancing" />
+          </div>
         </section>
         <Doggo />
       </div>
