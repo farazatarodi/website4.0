@@ -12,7 +12,7 @@ const Project = ({ id, color, title, bg, desc }) => {
       ' 35%, rgba(0,0,0,0) 100%), url("' +
       bg +
       '")';
-    title.style.transform = 'rotate(0deg)';
+    title.style.transform = 'rotate(0deg) translateY(50%)';
     desc.style.animation = 'show 0.2s steps(1)';
     desc.style.display = 'initial';
     desc.style.visibility = 'visible';

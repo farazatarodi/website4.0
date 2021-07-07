@@ -49,7 +49,6 @@ section {
   color: white;
   text-decoration: none;
   cursor: pointer;
-  transition: color 0.2s;
 }
 
 .sec1 > a:before {

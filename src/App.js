@@ -3,14 +3,17 @@ import './css/Doggo.css';
 import './css/One.css';
 import './css/Two.css';
 import './css/Three.css';
+import './css/Four.css';
 import scroll from './media/down-arrow.png';
 import Doggo from './Doggo';
 import Skill from './Skill';
 import Edu from './Edu';
 import python from './media/logos/python.png';
 import Project from './Project';
+import ContactForm from './ContactForm';
+import linkArrow from './media/diagonal-arrow.png';
 
-// image import
+// bg image import
 import two from './media/bg/2.0.png';
 import four from './media/bg/4.0.png';
 import av from './media/bg/av.png';
@@ -237,7 +240,7 @@ function App() {
           <div className="sec1">
             <a href="#home">HOME</a>
             <a href="#about">ABOUT</a>
-            <a href="#projects">PROJECTS</a>
+            <a href="#experiences">EXPERIENCES</a>
             <a href="#contact">CONTACT</a>
           </div>
           <div className="sec2">
@@ -322,7 +325,7 @@ function App() {
           </div>
           <img src={python} alt="" className="logo" />
         </section>
-        <section className="three" id="projects">
+        <section className="three" id="experiences">
           <div className="project-wrapper">
             {projectData.map(({ id, color, title, bg, desc }) => (
               <Project
@@ -333,6 +336,68 @@ function App() {
                 desc={desc}
               />
             ))}
+          </div>
+        </section>
+        <section id="contact" className="four">
+          <div className="contact-wrapper">
+            <div className="contact1">
+              <div className="details">
+                Info
+                <div style={{ fontSize: '2rem', fontWeight: '300' }}>
+                  <a href="tel:+32492839028" className="links">
+                    +32 492 83 92
+                    <img src={linkArrow} alt="" className="link-arrow" />
+                  </a>
+                  <br />
+                  <a
+                    href="mailto:f.atarodi.contact@gmail.com"
+                    className="links"
+                  >
+                    f.atarodi.contact@gmail.com
+                    <img src={linkArrow} alt="" className="link-arrow" />
+                  </a>
+                </div>
+              </div>
+              <div className="social">
+                Social Media
+                <div style={{ fontSize: '2rem', fontWeight: '300' }}>
+                  <a
+                    className="links"
+                    href="https://www.linkedin.com/in/faraz-atarodi/"
+                  >
+                    LinkedIn
+                    <img src={linkArrow} alt="" className="link-arrow" />
+                  </a>
+                  <br />
+                  <a
+                    className="links"
+                    href="https://www.facebook.com/f.atarodi"
+                  >
+                    Facebook
+                    <img src={linkArrow} alt="" className="link-arrow" />
+                  </a>
+                </div>
+              </div>
+              <div className="cv">
+                CV
+                <div style={{ fontSize: '2rem', fontWeight: '300' }}>
+                  <a className="links" href="">
+                    View
+                  </a>
+                  <br />
+                  <a className="links" href="">
+                    Download
+                    <img src={linkArrow} alt="" className="link-arrow" />
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div className="contact2">
+              <div>Direct</div>
+              <div style={{ height: '55%' }}>
+                <ContactForm />
+              </div>
+            </div>
           </div>
         </section>
         <Doggo />
