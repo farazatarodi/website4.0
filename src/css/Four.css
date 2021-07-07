@@ -87,6 +87,8 @@
   font-family: 'Roboto';
   font-size: 1rem;
   margin-bottom: 1rem;
+  border: none;
+  border-radius: none;
 }
 
 #message {
@@ -99,7 +101,7 @@
 
 .submit {
   width: fit-content;
-  padding: 1rem 2rem;
+  padding: 0.7rem 2rem;
   border: none;
   border-radius: 5rem;
   color: #141414;
@@ -111,4 +113,15 @@
 
 .submit:hover {
   opacity: 0.8;
+}
+
+.GIT {
+  position: absolute;
+  top: 15%;
+  right: 0%;
+  font-size: 5rem;
+  font-weight: 700;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-color: white;
+  -webkit-text-stroke-width: 2px;
 }

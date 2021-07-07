@@ -12,6 +12,7 @@ import python from './media/logos/python.png';
 import Project from './Project';
 import ContactForm from './ContactForm';
 import linkArrow from './media/diagonal-arrow.png';
+import cv from './media/CV.pdf';
 
 // bg image import
 import two from './media/bg/2.0.png';
@@ -38,6 +39,7 @@ var oldSec = 0;
 var curSec = 0;
 var startTimer = 0;
 var walkTimer = 0;
+var sRight = 0;
 
 const scrollDirection = () => {
   const container = document.querySelector('.scroll-container');
@@ -98,11 +100,25 @@ const scrollDirection = () => {
       doggo.style.animation = 'ogbg 0s linear';
     }
   }, 1200);
+
+  // right value for GIT
+  sRight = 4 * window.innerWidth - container.scrollLeft;
+  const git1 = document.querySelector('#git1');
+  const git2 = document.querySelector('#git2');
+  if (curSec > 2) {
+    git1.style.transform = `translate(-${
+      (sRight / window.innerWidth - 0.8) * 550
+    }%, 0)`;
+    git2.style.transform = `translate(-${
+      (sRight / window.innerWidth - 0.9) * 450
+    }%, 100%)`;
+  }
 };
 
 // project data
 const projectData = [
   {
+    key: 1,
     id: 'siemens',
     color: '#FF5420',
     title: 'Siemens Healthineers',
@@ -110,6 +126,7 @@ const projectData = [
     desc: 'One year of full-time job at Siemens Healthineers as an ultrasound engineer',
   },
   {
+    key: 2,
     id: 'os',
     color: '#F48636',
     title: 'Omran Soule Co.',
@@ -117,110 +134,125 @@ const projectData = [
     desc: 'Part-time job at Omran Soule Co. as a python developer and full stack engineer',
   },
   {
+    key: 3,
     id: 'robot',
     color: '#F7EBE1',
     title: 'Robot Path Simulator',
     bg: robot,
     desc: 'A small script in Python that turns strings into movement commands for a robot',
   },
-  ,
+
   {
+    key: 4,
     id: 'iran',
     color: '#F7C69E',
     title: 'Iran Population Map',
     bg: iran,
     desc: 'An interactive population map of Iran using React, Python, Deck.gl and Mapbox',
   },
-  ,
+
   {
+    key: 5,
     id: 'iot',
     color: '#FECB4B',
     title: 'IoT Boards',
     bg: iot,
     desc: 'A study on the possibility of imlplementing SBCs into home appliences',
   },
-  ,
+
   {
+    key: 6,
+
     id: 'bb',
     color: '#3D6033',
     title: 'Breaking Bad Characters',
     bg: bb,
     desc: 'Another small script in Python that outputs episode numbers of Breaking Bad series based on provided charachter input',
   },
-  ,
+
   {
+    key: 7,
     id: 'mc',
     color: '#7CBD6B',
     title: 'Minecraft Farm Wiki',
     bg: mc,
     desc: 'A hobby website that deals with technical aspect of Minecraft',
   },
-  ,
+
   {
+    key: 8,
     id: 'vision',
     color: '#2F9A80',
     title: 'Computer Vision and Smart Assistant',
     bg: vision,
     desc: 'A system that gets inputs from the camera and adapts the assistant based on the situation',
   },
-  ,
+
   {
+    key: 9,
     id: 'four',
     color: '#00FFCC',
     title: 'Personal Website v4.0',
     bg: four,
     desc: 'This website! Created with React',
   },
-  ,
+
   {
+    key: 10,
     id: 'qr',
     color: '#30D9D9',
     title: 'Object and QR code Detection',
     bg: qr,
     desc: 'A Python project to navigate a drone based on the camera input and scan QR codes to gather points',
   },
-  ,
+
   {
+    key: 11,
     id: 'task',
     color: '#011936',
     title: 'Task Tracker',
     bg: task,
     desc: 'A simple task tracker in React',
   },
-  ,
+
   {
+    key: 12,
     id: 'two',
     color: '#323840',
     title: 'Personal Website v2.0',
     bg: two,
     desc: "Previous version of my personal website. It's in Vanilla JS",
   },
-  ,
+
   {
+    key: 13,
     id: 'disk',
     color: '#A3ACBF',
     title: 'Disk Sorter',
     bg: disk,
     desc: 'A disk sorter based on varying thicknesses of disks.',
   },
-  ,
+
   {
+    key: 14,
     id: 'av',
     color: '#252140',
     title: 'Autonomous Vehicle Components',
     bg: av,
     desc: "My bachelor's thesis. A study on different methods and components of autopilot systems with the goal of implementing said systems into ordinary vehicles",
   },
-  ,
+
   {
+    key: 15,
     id: 'ha',
     color: '#F7C8D6',
     title: 'Hamrahan Atebba Co.',
     bg: ha,
     desc: 'Part-time job at Hamrahan Atebba Co. as an IT manager and full stack engineer',
   },
-  ,
+
   {
+    key: 16,
     id: 'board',
     color: '#B3444F',
     title: 'Self-balancing robot',
@@ -259,7 +291,13 @@ function App() {
           </div>
 
           {/* Scroll right animation */}
-          <img src={scroll} className="scroll-animation" alt=""></img>
+          <div className="scroll-animation">
+            <div>
+              Hold Shift
+              <br />& Scroll
+            </div>
+            <img src={scroll} alt=""></img>
+          </div>
         </section>
 
         {/* 2. About section */}
@@ -327,8 +365,9 @@ function App() {
         </section>
         <section className="three" id="experiences">
           <div className="project-wrapper">
-            {projectData.map(({ id, color, title, bg, desc }) => (
+            {projectData.map(({ key, id, color, title, bg, desc }) => (
               <Project
+                key={key}
                 id={id}
                 color={color}
                 title={title}
@@ -364,6 +403,8 @@ function App() {
                   <a
                     className="links"
                     href="https://www.linkedin.com/in/faraz-atarodi/"
+                    target="_blank"
+                    rel="noreferrer"
                   >
                     LinkedIn
                     <img src={linkArrow} alt="" className="link-arrow" />
@@ -372,6 +413,8 @@ function App() {
                   <a
                     className="links"
                     href="https://www.facebook.com/f.atarodi"
+                    target="_blank"
+                    rel="noreferrer"
                   >
                     Facebook
                     <img src={linkArrow} alt="" className="link-arrow" />
@@ -381,13 +424,29 @@ function App() {
               <div className="cv">
                 CV
                 <div style={{ fontSize: '2rem', fontWeight: '300' }}>
-                  <a className="links" href="">
+                  <a
+                    className="links"
+                    href={cv}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                     View
+                    <img src={linkArrow} alt="" className="link-arrow" />
                   </a>
                   <br />
-                  <a className="links" href="">
+                  <a
+                    className="links"
+                    href="https://drive.google.com/uc?export=download&id=1hBbmkl2GUX99TBsjXokvpR_5BnqFqzMS"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                     Download
-                    <img src={linkArrow} alt="" className="link-arrow" />
+                    <img
+                      src={linkArrow}
+                      alt=""
+                      className="link-arrow"
+                      target="_blank"
+                    />
                   </a>
                 </div>
               </div>
@@ -398,6 +457,16 @@ function App() {
                 <ContactForm />
               </div>
             </div>
+          </div>
+          <div id="git1" className="GIT">
+            GET IN
+          </div>
+          <div
+            id="git2"
+            className="GIT"
+            style={{ transform: 'translate(0,100%)' }}
+          >
+            TOUCH
           </div>
         </section>
         <Doggo />

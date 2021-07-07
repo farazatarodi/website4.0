@@ -41,10 +41,13 @@
 
 .scroll-animation {
   position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   top: 50%;
   right: 0%;
   opacity: 0;
-  transform: translate(-110%, -50%) rotate(-90deg);
+  transform: translate(-70%, -50%);
   animation: spin 1.5s ease-out infinite;
   height: 2rem;
   filter: invert(1);
@@ -52,7 +55,12 @@
 
 @keyframes spin {
   100% {
-    transform: translate(-70%, -50%) rotate(-90deg);
+    transform: translate(-30%, -50%);
     opacity: 1;
   }
+}
+
+.scroll-animation img {
+  height: 2rem;
+  transform: rotate(-90deg);
 }
