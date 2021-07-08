@@ -1,0 +1,42 @@
+{
+  "files": {
+    "main.css": "/website4.0/static/css/main.4d415863.chunk.css",
+    "main.js": "/website4.0/static/js/main.39f20940.chunk.js",
+    "main.js.map": "/website4.0/static/js/main.39f20940.chunk.js.map",
+    "runtime-main.js": "/website4.0/static/js/runtime-main.22f7b4be.js",
+    "runtime-main.js.map": "/website4.0/static/js/runtime-main.22f7b4be.js.map",
+    "static/js/2.78f30b11.chunk.js": "/website4.0/static/js/2.78f30b11.chunk.js",
+    "static/js/2.78f30b11.chunk.js.map": "/website4.0/static/js/2.78f30b11.chunk.js.map",
+    "static/js/3.db428849.chunk.js": "/website4.0/static/js/3.db428849.chunk.js",
+    "static/js/3.db428849.chunk.js.map": "/website4.0/static/js/3.db428849.chunk.js.map",
+    "index.html": "/website4.0/index.html",
+    "static/css/main.4d415863.chunk.css.map": "/website4.0/static/css/main.4d415863.chunk.css.map",
+    "static/js/2.78f30b11.chunk.js.LICENSE.txt": "/website4.0/static/js/2.78f30b11.chunk.js.LICENSE.txt",
+    "static/media/Doggo.css": "/website4.0/static/media/2.1c6e61c1.png",
+    "static/media/2.0.8621d408.png": "/website4.0/static/media/2.0.8621d408.png",
+    "static/media/4.0.bc6e222b.png": "/website4.0/static/media/4.0.bc6e222b.png",
+    "static/media/CV.87bb1b2e.pdf": "/website4.0/static/media/CV.87bb1b2e.pdf",
+    "static/media/av.c5015845.png": "/website4.0/static/media/av.c5015845.png",
+    "static/media/bb.323a482c.png": "/website4.0/static/media/bb.323a482c.png",
+    "static/media/board.e3351536.png": "/website4.0/static/media/board.e3351536.png",
+    "static/media/disk.542df343.png": "/website4.0/static/media/disk.542df343.png",
+    "static/media/ha.032db157.png": "/website4.0/static/media/ha.032db157.png",
+    "static/media/iot.0c3ef926.png": "/website4.0/static/media/iot.0c3ef926.png",
+    "static/media/iran.63ecc248.png": "/website4.0/static/media/iran.63ecc248.png",
+    "static/media/mc.0d8e31ee.png": "/website4.0/static/media/mc.0d8e31ee.png",
+    "static/media/os.e94b112c.png": "/website4.0/static/media/os.e94b112c.png",
+    "static/media/qr.13783518.png": "/website4.0/static/media/qr.13783518.png",
+    "static/media/robot.b1552366.png": "/website4.0/static/media/robot.b1552366.png",
+    "static/media/sharif.2f0ac2d0.png": "/website4.0/static/media/sharif.2f0ac2d0.png",
+    "static/media/siemens.2c794bc0.png": "/website4.0/static/media/siemens.2c794bc0.png",
+    "static/media/task.b1a7dd34.png": "/website4.0/static/media/task.b1a7dd34.png",
+    "static/media/vba.e4fc81f9.png": "/website4.0/static/media/vba.e4fc81f9.png",
+    "static/media/vision.583bc9e0.png": "/website4.0/static/media/vision.583bc9e0.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.22f7b4be.js",
+    "static/js/2.78f30b11.chunk.js",
+    "static/css/main.4d415863.chunk.css",
+    "static/js/main.39f20940.chunk.js"
+  ]
+}
