@@ -98,8 +98,8 @@ const scrollAnims = () => {
   // Set timer for sitting position photo
   walkTimer = setTimeout(() => {
     if (
-      doggo.offsetLeft === Math.ceil((curSec + 0.95) * window.innerWidth) ||
-      doggo.offsetLeft === Math.ceil((curSec + 0.05) * window.innerWidth)
+      doggo.offsetLeft === Math.round((curSec + 0.95) * window.innerWidth) ||
+      doggo.offsetLeft === Math.round((curSec + 0.05) * window.innerWidth)
     ) {
       doggo.style.animation = 'ogbg 0s linear';
     }
@@ -268,7 +268,13 @@ const projectData = [
 // Main
 function App() {
   return (
-    <div className="App">
+    <div
+      className="App"
+      onLoad={() => {
+        const html = document.querySelector('.main-html');
+        html.style.fontSize = `${(window.innerWidth / 1920) * 16}px`;
+      }}
+    >
       {/* container for scroll snap */}
       <div className="scroll-container" onScroll={scrollAnims}>
         {/* Header */}
