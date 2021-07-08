@@ -56,7 +56,10 @@ const doggoCome = (e) => {
 const Doggo = () => {
   return (
     <div className="doggo-div" onMouseMove={doggoCome}>
-      <div className="doggo"></div>
+      <div
+        className="doggo"
+        onClick={() => window.open('https://www.google.com/search?q=samoyed')}
+      ></div>
       <img className="bone" src={bone} alt=""></img>
     </div>
   );

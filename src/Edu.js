@@ -5,6 +5,7 @@ const Edu = ({ id }) => {
   var text = '';
   var logoSrc;
   var link = '';
+
   if (id === 'KUL') {
     text = 'M.Sc. in Electromechanical Engineering from KU Leuven';
     logoSrc = kul;
@@ -16,6 +17,7 @@ const Edu = ({ id }) => {
     logoSrc = sharif;
     link = 'http://www.en.sharif.edu/';
   }
+
   return (
     <div>
       <img src={logoSrc} alt="" />

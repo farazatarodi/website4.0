@@ -19,6 +19,7 @@
   transition: left 1s linear;
   transform: translateX(50%) scaleX(1);
   background-image: url('../media/0.png');
+  cursor: pointer;
 }
 
 @keyframes bg {

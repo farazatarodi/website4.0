@@ -1,18 +1,22 @@
+import Doggo from './Doggo';
+import Skill from './Skill';
+import Edu from './Edu';
+import Project from './Project';
+import ContactForm from './ContactForm';
+
+// import media
+import linkArrow from './media/diagonal-arrow.png';
+import cv from './media/CV.pdf';
+import python from './media/logos/python.png';
+import scroll from './media/down-arrow.png';
+
+// import css files
 import './css/App.css';
 import './css/Doggo.css';
 import './css/One.css';
 import './css/Two.css';
 import './css/Three.css';
 import './css/Four.css';
-import scroll from './media/down-arrow.png';
-import Doggo from './Doggo';
-import Skill from './Skill';
-import Edu from './Edu';
-import python from './media/logos/python.png';
-import Project from './Project';
-import ContactForm from './ContactForm';
-import linkArrow from './media/diagonal-arrow.png';
-import cv from './media/CV.pdf';
 
 // bg image import
 import two from './media/bg/2.0.png';
@@ -32,7 +36,7 @@ import siemens from './media/bg/siemens.png';
 import task from './media/bg/task.png';
 import vision from './media/bg/vision.png';
 
-// scroll direction function
+// scroll animations function
 var oldLeft = 0;
 var left = false;
 var oldSec = 0;
@@ -41,7 +45,7 @@ var startTimer = 0;
 var walkTimer = 0;
 var sRight = 0;
 
-const scrollDirection = () => {
+const scrollAnims = () => {
   const container = document.querySelector('.scroll-container');
   const doggo = document.querySelector('.doggo');
 
@@ -266,7 +270,7 @@ function App() {
   return (
     <div className="App">
       {/* container for scroll snap */}
-      <div className="scroll-container" onScroll={scrollDirection}>
+      <div className="scroll-container" onScroll={scrollAnims}>
         {/* Header */}
         <div className="header">
           <div className="sec1">
@@ -330,6 +334,8 @@ function App() {
           <div className="about2">
             <div className="skills-wrapper">
               <div className="skills-title">Skills</div>
+
+              {/* skills components */}
               <div className="skills">
                 <Skill id="Python" />
                 <span> - </span>
@@ -355,14 +361,19 @@ function App() {
               </div>
             </div>
 
+            {/* education div */}
             <div className="edu">
               <div className="edu-title">Education</div>
               <Edu id="Sharif" />
               <Edu id="KUL" />
             </div>
           </div>
+
+          {/* skill bg logo */}
           <img src={python} alt="" className="logo" />
         </section>
+
+        {/* 3. Experiences section */}
         <section className="three" id="experiences">
           <div className="project-wrapper">
             {projectData.map(({ key, id, color, title, bg, desc }) => (
@@ -377,14 +388,18 @@ function App() {
             ))}
           </div>
         </section>
+
+        {/* 4. Contact section */}
         <section id="contact" className="four">
           <div className="contact-wrapper">
+            {/* left side */}
             <div className="contact1">
+              {/* info div */}
               <div className="details">
                 Info
                 <div style={{ fontSize: '2rem', fontWeight: '300' }}>
                   <a href="tel:+32492839028" className="links">
-                    +32 492 83 92
+                    +32 492 83 92 28
                     <img src={linkArrow} alt="" className="link-arrow" />
                   </a>
                   <br />
@@ -397,6 +412,8 @@ function App() {
                   </a>
                 </div>
               </div>
+
+              {/* social div */}
               <div className="social">
                 Social Media
                 <div style={{ fontSize: '2rem', fontWeight: '300' }}>
@@ -421,6 +438,8 @@ function App() {
                   </a>
                 </div>
               </div>
+
+              {/* cv div */}
               <div className="cv">
                 CV
                 <div style={{ fontSize: '2rem', fontWeight: '300' }}>
@@ -451,13 +470,18 @@ function App() {
                 </div>
               </div>
             </div>
+
+            {/* right side */}
             <div className="contact2">
+              {/* main form */}
               <div>Direct</div>
               <div style={{ height: '55%' }}>
                 <ContactForm />
               </div>
             </div>
           </div>
+
+          {/* get in touch bg */}
           <div id="git1" className="GIT">
             GET IN
           </div>
@@ -469,6 +493,8 @@ function App() {
             TOUCH
           </div>
         </section>
+
+        {/* doggo section */}
         <Doggo />
       </div>
     </div>
