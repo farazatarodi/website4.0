@@ -460,12 +460,17 @@ function App() {
                     rel="noreferrer"
                   >
                     Download
-                    <img
-                      src={linkArrow}
-                      alt=""
-                      className="link-arrow"
-                      target="_blank"
-                    />
+                    <img src={linkArrow} alt="" className="link-arrow" />
+                  </a>
+                  <br />
+                  <a
+                    className="links"
+                    href="https://github.com/farazatarodi"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Github
+                    <img src={linkArrow} alt="" className="link-arrow" />
                   </a>
                 </div>
               </div>
