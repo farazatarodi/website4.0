@@ -19,7 +19,7 @@ const Project = ({ id, color, title, bg, desc }) => {
       '")';
 
     // rotate title
-    title.style.transform = 'rotate(0deg) translateY(50%)';
+    title.style.transform = 'rotate(0deg) translateY(120%)';
 
     // show description
     desc.style.animation = 'show 0.2s steps(1)';
@@ -40,7 +40,7 @@ const Project = ({ id, color, title, bg, desc }) => {
     project.style.backgroundImage = '';
 
     // rotate title
-    title.style.transform = 'rotate(-90deg)';
+    title.style.transform = 'translate(0%, 50%) rotate(-90deg)';
 
     // hide description
     desc.style.animation = '';

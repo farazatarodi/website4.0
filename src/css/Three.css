@@ -32,9 +32,9 @@
   font-size: 1.5rem;
   font-weight: 700;
   left: 0;
-  bottom: -5%;
+  bottom: 0%;
   transform-origin: 0 0;
-  transform: rotate(-90deg);
+  transform: translate(0%, 50%) rotate(-90deg);
   text-shadow: -1px 1px 5px rgba(0, 0, 0, 0.3), 1px -1px 5px rgba(0, 0, 0, 0.3);
   transition: transform 0.2s ease-in-out;
 }
