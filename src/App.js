@@ -17,6 +17,7 @@ import './css/One.css';
 import './css/Two.css';
 import './css/Three.css';
 import './css/Four.css';
+import './css/mobile.css';
 
 // bg image import
 import two from './media/bg/2.0.png';
@@ -496,11 +497,7 @@ function App() {
           <div id="git1" className="GIT">
             GET IN
           </div>
-          <div
-            id="git2"
-            className="GIT"
-            style={{ transform: 'translate(0,100%)' }}
-          >
+          <div id="git2" className="GIT">
             TOUCH
           </div>
         </section>

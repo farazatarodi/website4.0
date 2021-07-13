@@ -1,0 +1,166 @@
+@media only screen and (max-width: 600px) {
+  html {
+    font-size: 9px !important;
+  }
+  .doggo,
+  .doggo-div {
+    display: none;
+  }
+
+  .scroll-container {
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    width: 100vw;
+    scroll-behavior: smooth;
+  }
+
+  .two,
+  .three,
+  .four {
+    position: relative;
+    left: 0;
+  }
+
+  .header {
+    flex-direction: column;
+  }
+
+  .sec1 {
+    width: 100%;
+  }
+
+  .sec2 {
+    display: none;
+  }
+
+  .name {
+    text-align: center;
+  }
+
+  .scroll-animation div {
+    display: none;
+  }
+
+  .scroll-animation {
+    top: 80%;
+    right: 50%;
+    transform: translate(50%, 0%) rotate(90deg);
+  }
+
+  @keyframes spin {
+    100% {
+      transform: translate(50%, 50%) rotate(90deg);
+      opacity: 1;
+    }
+  }
+
+  .two {
+    flex-direction: column;
+  }
+
+  .about1,
+  .about2 {
+    width: 100%;
+    padding: 0rem 4rem;
+    margin: 0;
+  }
+
+  .about1 {
+    justify-content: flex-end;
+  }
+
+  .about2 {
+    justify-content: flex-start;
+  }
+
+  .about2 > * {
+    margin: 0;
+  }
+
+  .three {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .project-wrapper {
+    position: absolute;
+    height: 100vw;
+    transform: rotate(90deg);
+    width: 90vh;
+    padding: 4rem;
+  }
+
+  .project {
+    height: 100%;
+  }
+
+  .project-description {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+  }
+
+  .four {
+    overflow-x: hidden;
+  }
+
+  .contact-wrapper {
+    position: absolute;
+    flex-direction: column;
+    width: 100%;
+    padding: 0rem 4rem;
+    margin: 0;
+    height: 90%;
+    bottom: 0;
+  }
+
+  .contact1,
+  .contact2 {
+    width: 100%;
+    margin: 0%;
+    padding: 0;
+    align-items: center;
+  }
+
+  .contact1 {
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .contact1 > * {
+    height: fit-content;
+  }
+
+  .contact2 {
+    padding-bottom: 5rem;
+  }
+
+  .contact2 > * {
+    width: 100%;
+  }
+
+  .GIT {
+    top: 50%;
+  }
+
+  #git1 {
+    transform: translate(-115%, 0%);
+    animation: slide 5s linear infinite;
+  }
+
+  #git2 {
+    transform: translate(0%, 0%);
+    animation: slide 5s linear infinite;
+  }
+
+  @keyframes slide {
+    0% {
+      right: -100%;
+    }
+
+    100% {
+      right: 100%;
+    }
+  }
+}

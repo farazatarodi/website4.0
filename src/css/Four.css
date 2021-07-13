@@ -125,3 +125,7 @@
   -webkit-text-stroke-color: white;
   -webkit-text-stroke-width: 2px;
 }
+
+#git2 {
+  transform: translate(0, 100%);
+}
