@@ -41,6 +41,10 @@
   line-height: 1.7rem;
 }
 
+.more {
+  display: none;
+}
+
 .edu,
 .skills-wrapper {
   width: 100%;

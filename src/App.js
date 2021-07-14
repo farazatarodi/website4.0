@@ -3,6 +3,7 @@ import Skill from './Skill';
 import Edu from './Edu';
 import Project from './Project';
 import ContactForm from './ContactForm';
+import { useState } from 'react';
 
 // import media
 import linkArrow from './media/diagonal-arrow.png';
@@ -268,6 +269,9 @@ const projectData = [
 
 // Main
 function App() {
+  // more boolean
+  const [clicked, setClicked] = useState(false);
+
   return (
     <div
       className="App"
@@ -335,6 +339,23 @@ function App() {
                 <br />
                 I'm looking for new opportunities to expand my experience and
                 knowledge.
+              </div>
+              <div
+                className="more"
+                onClick={() => {
+                  const text = document.querySelector('.text-wrapper');
+                  const more = document.querySelector('.more');
+                  if (!clicked) {
+                    text.style.overflowY = 'visible';
+                    more.style.position = 'relative';
+                  } else {
+                    text.style.overflowY = 'hidden';
+                    more.style.position = 'absolute';
+                  }
+                  setClicked(!clicked);
+                }}
+              >
+                {clicked ? '...less' : 'more...'}
               </div>
             </div>
           </div>
@@ -404,7 +425,7 @@ function App() {
               {/* info div */}
               <div className="details">
                 Info
-                <div style={{ fontSize: '2rem', fontWeight: '300' }}>
+                <div className="contact-links">
                   <a href="tel:+32492839028" className="links">
                     +32 492 83 92 28
                     <img src={linkArrow} alt="" className="link-arrow" />
@@ -423,7 +444,7 @@ function App() {
               {/* social div */}
               <div className="social">
                 Social Media
-                <div style={{ fontSize: '2rem', fontWeight: '300' }}>
+                <div className="contact-links">
                   <a
                     className="links"
                     href="https://www.linkedin.com/in/faraz-atarodi/"
@@ -449,7 +470,7 @@ function App() {
               {/* cv div */}
               <div className="cv">
                 CV
-                <div style={{ fontSize: '2rem', fontWeight: '300' }}>
+                <div className="contact-links">
                   <a
                     className="links"
                     href={cv}

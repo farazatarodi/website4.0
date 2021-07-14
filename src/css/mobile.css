@@ -126,6 +126,7 @@
     justify-content: space-between;
     flex-direction: row;
     flex-wrap: wrap;
+    height: 50%;
   }
 
   .contact1 > * {
@@ -141,7 +142,7 @@
   }
 
   .GIT {
-    top: 50%;
+    top: 40%;
   }
 
   #git1 {
@@ -161,6 +162,68 @@
 
     100% {
       right: 100%;
+    }
+  }
+
+  @media only screen and (max-height: 660px) {
+    .about1 {
+      height: 45%;
+    }
+
+    .about2 {
+      z-index: -1;
+    }
+
+    .text-wrapper {
+      position: relative;
+      height: 75%;
+      overflow-y: hidden;
+    }
+
+    .hello {
+      font-size: 3rem;
+    }
+
+    .me {
+      background-color: #141414;
+    }
+
+    .more {
+      width: 100%;
+      font-size: 1.5rem;
+      display: flex;
+      position: absolute;
+      bottom: 0;
+      color: rgb(97, 97, 97);
+      background-color: #141414;
+    }
+
+    .skills-title,
+    .edu-title {
+      font-size: 2rem;
+    }
+
+    .skills span {
+      font-size: 1.5rem;
+      -webkit-text-stroke-width: inherit;
+      -webkit-text-fill-color: inherit;
+      color: white;
+    }
+
+    .contact1,
+    .contact2 {
+      font-size: 2rem;
+    }
+
+    .contact-links {
+      font-size: 1.7rem;
+    }
+
+    .links {
+      font-size: 1.7rem;
+    }
+    .GIT {
+      font-size: 4rem;
     }
   }
 }

@@ -37,6 +37,11 @@
   padding-right: 15%;
 }
 
+.contact-links {
+  font-size: 2rem;
+  font-weight: 300;
+}
+
 .links {
   color: white;
   text-decoration: none;
@@ -77,6 +82,7 @@
   flex-direction: column;
   font-size: 2rem;
   font-weight: 300;
+  height: 100%;
 }
 
 #name,
@@ -92,7 +98,7 @@
 }
 
 #message {
-  height: 10rem;
+  height: 40%;
   cursor: text;
   font-family: 'Roboto';
   font-size: 1rem;
