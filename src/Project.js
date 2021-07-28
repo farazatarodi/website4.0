@@ -1,3 +1,6 @@
+import { Link } from 'react-router-dom';
+import linkArrow from './media/diagonal-arrow.png';
+
 const Project = ({ id, color, title, bg, desc }) => {
   // expand project
   const expand = () => {
@@ -61,6 +64,20 @@ const Project = ({ id, color, title, bg, desc }) => {
       </div>
       <div id={id + '-desc'} className="project-description">
         {desc}
+        <br />
+        <Link
+          to={`/${id}`}
+          className="links"
+          style={{ fontSize: '1rem', fontWeight: '400', lineHeight: '3rem' }}
+        >
+          Read More
+          <img
+            src={linkArrow}
+            alt=""
+            className="link-arrow"
+            style={{ height: '0.7rem', width: '0.7rem' }}
+          />
+        </Link>
       </div>
     </div>
   );
