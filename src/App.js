@@ -20,6 +20,7 @@ import './css/Two.css';
 import './css/Three.css';
 import './css/Four.css';
 import './css/mobile.css';
+import './css/project.css';
 
 // scroll animations function
 var oldLeft = 0;
