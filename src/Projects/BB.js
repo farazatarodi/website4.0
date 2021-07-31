@@ -35,37 +35,20 @@ const BB = () => {
           </div>
         </div>
         <div className="pr-row2">
-          I studied mechatronics engineering for my bachelor's degree in my
-          hometown of Tehran, Iran. My program consisted of three main subjects,
-          mechanical and electronics engineering and computer science. For my
-          final thesis, I decided to study a topic that covers all of these
-          subjects. The autonomous vehicles topic was the first thing that came
-          to mind as it is a rather traditional industry going through
-          modernization. During my initial research, I realized that there are
-          extensive papers regarding the technology surrounding the topic.
-          However, one approach was not studied and that was the approach of
-          converting current vehicles to autonomous vehicles.
-          <br />I managed to get one of the most published professors in my
-          country as a supervisor and with his approval, I began my main
-          research. After several months, I provided a detailed report with
-          great accuracy on the components needed for this conversion. This
-          initial report although detailed did not satisfy my supervisor. He
-          needed me to come up with a method to make this conversion process
-          optimized.
-          <br />
-          The next step for me was to study each component and understand its
-          functionality. This process helped me understand the relationship
-          between components and how I can add or remove elements to make the
-          system more efficient.
-          <br />
-          One of the main subjects in my paper was the implementation of speed
-          controllers and proximity sensors to achieve complete speed control. I
-          studied and provided several controllers and different technologies
-          that can be used for this purpose.
-          <br />
-          This paper is in my native language of Persian, but I have provided a
-          download link just in case. I hope you enjoy reading it and find it
-          useful.
+          This test was requested as part of a python internship interview. The
+          goal of this script is to return the list of episodes where certain
+          characters have appeared together. It uses the Breaking Bad API
+          (https://breakingbadapi.com/) to retrieve the needed information. The
+          API has several endpoints but the one we are interested in is the
+          episodes endpoint. The script uses the standard 'requests' library in
+          python to send a request to the API. The API sends back a JSON
+          response that includes all information about the episodes. Then the
+          script checks if the input character list is the sublist of each
+          episode character list. If true, then the episode ID is added to a
+          common episodes list. In the end, that list is used to display the
+          information in the requested format. There was a pytest file provided
+          to check the validity of the results. More info is available in the
+          script file itself and the readme file.
         </div>
       </div>
     </div>
