@@ -1,4 +1,4 @@
-import bone from './media/bone.png';
+import bone from './media/doggo/bone.png';
 
 // doggo follow function
 var timer;

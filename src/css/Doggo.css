@@ -4,7 +4,7 @@
   height: 20vh;
   bottom: 0%;
   cursor: none;
-  background-image: url('../media/ground.png');
+  background-image: url('../media/doggo/ground.png');
   background-repeat: repeat-x;
   background-position: bottom left;
   background-size: auto 2.7rem;
@@ -19,25 +19,25 @@
   background-repeat: no-repeat;
   transition: left 1s linear;
   transform: translateX(50%) scaleX(1);
-  background-image: url('../media/0.png');
+  background-image: url('../media/doggo/0.png');
   cursor: pointer;
 }
 
 @keyframes bg {
   0% {
-    background-image: url('../media/1.png');
+    background-image: url('../media/doggo/1.png');
   }
   50% {
-    background-image: url('../media/2.png');
+    background-image: url('../media/doggo/2.png');
   }
   100% {
-    background-image: url('../media/1.png');
+    background-image: url('../media/doggo/1.png');
   }
 }
 
 @keyframes ogbg {
   100% {
-    background-image: url('../media/0.png');
+    background-image: url('../media/doggo/0.png');
   }
 }
 
