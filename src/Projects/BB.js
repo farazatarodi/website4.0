@@ -1,6 +1,5 @@
 import Nav from './Nav';
 import bg from '../media/bg/bb.png';
-import link from '../media/Faraz_Atarodi-Bachelor_Thesis.pdf';
 import linkArrow from '../media/diagonal-arrow.png';
 
 const BB = () => {
