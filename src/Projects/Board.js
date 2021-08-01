@@ -22,7 +22,13 @@ const Board = () => {
             <img src={bg} alt="" className="pr-title-image" />
           </div>
         </div>
-        <div className="pr-row2">
+        <div
+          className="pr-row2"
+          style={{
+            borderBottom: '1px white solid',
+            paddingBottom: '2rem',
+          }}
+        >
           During my second semester of the bachelor's program, I was approached
           by one of my fellow classmates to take part in his project as a CAD
           designer. His goal was to develop a working prototype of a
@@ -53,12 +59,15 @@ const Board = () => {
           prototype capable of transporting passengers but we were extremely
           close.
           <br />
-          <img
-            src={pic1}
-            alt="self-balancing robot prototype"
-            style={{ width: '100%' }}
-          />
         </div>
+        <img
+          src={pic1}
+          alt="self-balancing robot prototype"
+          style={{
+            width: '50%',
+            marginTop: '2rem',
+          }}
+        />
       </div>
     </div>
   );
