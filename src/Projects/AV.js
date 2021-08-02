@@ -1,5 +1,5 @@
 import Nav from './Nav';
-import bg from '../media/bg/av.png';
+import bg from '../media/title/av.png';
 import paper from '../media/Faraz_Atarodi-Bachelor_Thesis.pdf';
 import linkArrow from '../media/diagonal-arrow.png';
 

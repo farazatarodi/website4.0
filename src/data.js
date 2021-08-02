@@ -156,7 +156,7 @@ const projectData = [
     key: 16,
     id: 'board',
     color: '#B3444F',
-    title: 'Self-balancing robot',
+    title: 'Self-balancing Robot',
     bg: board,
     desc: 'A self-balancing transportation robot',
   },

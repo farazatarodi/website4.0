@@ -1,5 +1,5 @@
 import Nav from './Nav';
-import bg from '../media/bg/bb.png';
+import bg from '../media/title/bb.jpg';
 import linkArrow from '../media/diagonal-arrow.png';
 
 const BB = () => {

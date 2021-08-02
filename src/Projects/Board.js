@@ -1,5 +1,5 @@
 import Nav from './Nav';
-import bg from '../media/bg/board.png';
+import bg from '../media/title/board.png';
 import pic1 from '../media/self-balancing-robot.jpg';
 
 const Board = () => {
