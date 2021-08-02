@@ -10,7 +10,7 @@ const IoT = () => {
       <div className="pr-container">
         <div className="pr-row1">
           <div className="pr-col1">
-            <div className="pr-title">Autonomous Vehicle Components</div>
+            <div className="pr-title">IoT Boards</div>
             <div className="pr-desc">2017 - 2018</div>
             <div className="pr-desc-title">Type:</div>
             <div className="pr-desc">Bachelor's Thesis</div>
