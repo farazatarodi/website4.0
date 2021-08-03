@@ -128,7 +128,7 @@
   padding-top: 2rem;
 }
 
-.gallery > * {
+.gallery > div {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -138,5 +138,7 @@
 }
 
 .gallery img {
+  width: 100%;
   padding-bottom: 1rem;
+  border: 1px solid grey;
 }
