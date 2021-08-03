@@ -117,3 +117,26 @@
     height: 0%;
   }
 }
+
+.gallery {
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  font-weight: 300;
+  padding-top: 2rem;
+}
+
+.gallery > * {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  padding: 1rem;
+}
+
+.gallery img {
+  padding-bottom: 1rem;
+}

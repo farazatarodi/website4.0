@@ -14,8 +14,10 @@ const Board = () => {
             <div className="pr-desc-title">Type:</div>
             <div className="pr-desc">Academic</div>
             <div className="pr-desc-title">Role:</div>
+            <div className="pr-desc">Student</div>
+            <div className="pr-desc-title">Technologies:</div>
             <div className="pr-desc" style={{ marginBottom: '1rem' }}>
-              CAD Designer/Arduino Programmer
+              Python - C - Arduino - Raspberry Pi - Various Sensors
             </div>
           </div>
           <div className="pr-col2">

@@ -14,8 +14,10 @@ const BB = () => {
             <div className="pr-desc-title">Type:</div>
             <div className="pr-desc">Test</div>
             <div className="pr-desc-title">Role:</div>
+            <div className="pr-desc">Student</div>
+            <div className="pr-desc-title">Technologies:</div>
             <div className="pr-desc" style={{ marginBottom: '1rem' }}>
-              Student
+              Python - Breaking Bad API - PyTest
             </div>
             <div className="pr-link">
               <a

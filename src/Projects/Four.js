@@ -15,8 +15,10 @@ const Four = () => {
             <div className="pr-desc-title">Type:</div>
             <div className="pr-desc">Bachelor's Thesis</div>
             <div className="pr-desc-title">Role:</div>
+            <div className="pr-desc">Student</div>
+            <div className="pr-desc-title">Technologies:</div>
             <div className="pr-desc" style={{ marginBottom: '1rem' }}>
-              Student
+              React - JavaScript - CSS - HTML - PHP - Node.js
             </div>
             <div className="pr-link">
               <a
