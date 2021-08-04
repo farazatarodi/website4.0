@@ -1,6 +1,5 @@
 import Nav from './Nav';
 import bg from '../media/title/ha2.png';
-import paper from '../media/Faraz_Atarodi-Bachelor_Thesis.pdf';
 import linkArrow from '../media/diagonal-arrow.png';
 
 const HA = () => {
@@ -11,23 +10,23 @@ const HA = () => {
         <div className="pr-row1">
           <div className="pr-col1">
             <div className="pr-title">Hamrahan Atebba Co.</div>
-            <div className="pr-desc">2017 - 2018</div>
+            <div className="pr-desc">2013 - 2016 / 2021</div>
             <div className="pr-desc-title">Type:</div>
-            <div className="pr-desc">Bachelor's Thesis</div>
+            <div className="pr-desc">Part-time Job / Freelance Job</div>
             <div className="pr-desc-title">Role:</div>
-            <div className="pr-desc">Student</div>
+            <div className="pr-desc">IT Manager / Full Stack Engineer</div>
             <div className="pr-desc-title">Technologies:</div>
             <div className="pr-desc" style={{ marginBottom: '1rem' }}>
-              Python - Breaking Bad API - PyTest
+              Python - WordPress - WooCommerce - CSS - JavaScript - PHP
             </div>
             <div className="pr-link">
               <a
                 className="links"
-                href={paper}
+                href="https://poopakmall.com"
                 target="_blank"
                 rel="noreferrer"
               >
-                View Paper
+                View Website
                 <img src={linkArrow} alt="" className="link-arrow" />
               </a>
             </div>
@@ -37,37 +36,41 @@ const HA = () => {
           </div>
         </div>
         <div className="pr-row2">
-          I studied mechatronics engineering for my bachelor's degree in my
-          hometown of Tehran, Iran. My program consisted of three main subjects,
-          mechanical and electronics engineering and computer science. For my
-          final thesis, I decided to study a topic that covers all of these
-          subjects. The autonomous vehicles topic was the first thing that came
-          to mind as it is a rather traditional industry going through
-          modernization. During my initial research, I realized that there are
-          extensive papers regarding the technology surrounding the topic.
-          However, one approach was not studied and that was the approach of
-          converting current vehicles to autonomous vehicles.
-          <br />I managed to get one of the most published professors in my
-          country as a supervisor and with his approval, I began my main
-          research. After several months, I provided a detailed report with
-          great accuracy on the components needed for this conversion. This
-          initial report although detailed did not satisfy my supervisor. He
-          needed me to come up with a method to make this conversion process
-          optimized.
+          After I finished high school, I got accepted to the top university in
+          my country. In that summer that I looked for internships and part-time
+          jobs to gather some experience. I was hired as an IT intern by
+          Hamrahan Atebba Co. and started in the August of 2013. The company was
+          moving to a new office and their IT department needed extra help. I
+          was given the role of network designer for the new space. That project
+          took 3 months to complete and afterward, I was promoted to a part-time
+          job. The company was happy with my performance so they promoted me
+          again after 3 months to IT manager. I maintained that position for 3
+          years until I sensed the need to work in a more related field of work
+          to my studies.
           <br />
-          The next step for me was to study each component and understand its
-          functionality. This process helped me understand the relationship
-          between components and how I can add or remove elements to make the
-          system more efficient.
+          The business had around 50 employees and to maintain that network I
+          decided to build two Microsoft Windows servers. The tasks of the
+          servers were to store company documents, share financial accounts and
+          track customer orders. I used several well-established software (like
+          Holoo) and my scripts to manage these tasks.
           <br />
-          One of the main subjects in my paper was the implementation of speed
-          controllers and proximity sensors to achieve complete speed control. I
-          studied and provided several controllers and different technologies
-          that can be used for this purpose.
+          The Hamrahan Atebba Co. is in the business of medical supplies, mostly
+          disposables. They would conduct their business in traditional ways, so
+          in my last year, I proposed that they start an online shop. The
+          obvious platform was WordPress with the addition of WooCommerce. I
+          started the store and for better performance, I made two plugins using
+          PHP and WordPress functions. The site was customized using CSS code
+          and was delivered.
           <br />
-          This paper is in my native language of Persian, but I have provided a
-          download link just in case. I hope you enjoy reading it and find it
-          useful.
+          Although it was not the first time I was working with web platforms,
+          it was the first time I was in a practical environment. The needs of
+          the company dictated much more customization than what I was taught in
+          theory. I made sure to gather as much experience as I could and it
+          proved to be very helpful in the coming years.
+          <br />I ended my contract in 2016 to join a job in my field. In the
+          year 2021, the company contacted me for another project. They wanted
+          to rebrand their website to feature a broader selection of products.
+          You can visit the new website using the provided link.
         </div>
       </div>
     </div>
