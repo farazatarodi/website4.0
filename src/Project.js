@@ -69,6 +69,8 @@ const Project = ({ id, color, title, bg, desc }) => {
           to={`/${id}`}
           className="links"
           style={{ fontSize: '1rem', fontWeight: '400', lineHeight: '3rem' }}
+          target="_blank"
+          rel="noreferrer"
         >
           Read More
           <img
