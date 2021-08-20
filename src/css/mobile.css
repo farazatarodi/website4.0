@@ -2,6 +2,7 @@
   html {
     font-size: 9px !important;
   }
+
   .doggo,
   .doggo-div {
     display: none;
@@ -153,6 +154,28 @@
   #git2 {
     transform: translate(0%, 0%);
     animation: slide 5s linear infinite;
+  }
+
+  .pr-row1 {
+    flex-direction: column;
+  }
+
+  .pr-col1,
+  .pr-col2 {
+    width: 100% !important;
+  }
+
+  .pr-title {
+    font-size: 4rem !important;
+  }
+
+  .pr-row2 {
+    column-count: 1 !important;
+    font-size: 1.5rem !important;
+  }
+
+  .gallery > div {
+    width: 100% !important;
   }
 
   @keyframes slide {
