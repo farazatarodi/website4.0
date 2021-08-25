@@ -129,7 +129,7 @@ function App() {
             <a href="#contact">CONTACT</a>
           </div>
           <div className="sec2">
-            <div>LEUVEN - BELGIUM</div>
+            <div>GHENT - BELGIUM</div>
           </div>
         </div>
 
