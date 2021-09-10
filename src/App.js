@@ -8,7 +8,7 @@ import projectData from './data';
 
 // import media
 import linkArrow from './media/diagonal-arrow.png';
-import cv from './media/CV.pdf';
+import cv from './media/Faraz Atarodi - CV.pdf';
 import python from './media/logos/python.png';
 import scroll from './media/down-arrow.png';
 
@@ -321,7 +321,7 @@ function App() {
                   <br />
                   <a
                     className="links"
-                    href="https://drive.google.com/uc?export=download&id=1hBbmkl2GUX99TBsjXokvpR_5BnqFqzMS"
+                    href="https://drive.google.com/uc?export=download&id=1p1vC4Jvnc5EcstR-SmMV2-WX3xkP8eVj"
                     target="_blank"
                     rel="noreferrer"
                   >
