@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import './css/index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { BrowserRouter, Route } from 'react-router-dom';
 
 // import project pages
 import AV from './Projects/AV';
@@ -26,25 +26,23 @@ import Vision from './Projects/Vision';
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
-      <Switch>
-        <Route path="/" component={App} exact />
-        <Route path="/av" component={AV} />
-        <Route path="/bb" component={BB} />
-        <Route path="/board" component={Board} />
-        <Route path="/disk" component={Disk} />
-        <Route path="/four" component={Four} />
-        <Route path="/ha" component={HA} />
-        <Route path="/iot" component={IoT} />
-        <Route path="/iran" component={Iran} />
-        <Route path="/mc" component={MC} />
-        <Route path="/os" component={OS} />
-        <Route path="/qr" component={QR} />
-        <Route path="/robot" component={Robot} />
-        <Route path="/siemens" component={Siemens} />
-        <Route path="/task" component={Task} />
-        <Route path="/two" component={Two} />
-        <Route path="/vision" component={Vision} />
-      </Switch>
+      <Route path="/" element={<App />} />
+      <Route path="/av" element={AV} />
+      <Route path="/bb" element={BB} />
+      <Route path="/board" element={Board} />
+      <Route path="/disk" element={Disk} />
+      <Route path="/four" element={Four} />
+      <Route path="/ha" element={HA} />
+      <Route path="/iot" element={IoT} />
+      <Route path="/iran" element={Iran} />
+      <Route path="/mc" element={MC} />
+      <Route path="/os" element={OS} />
+      <Route path="/qr" element={QR} />
+      <Route path="/robot" element={Robot} />
+      <Route path="/siemens" element={Siemens} />
+      <Route path="/task" element={Task} />
+      <Route path="/two" element={Two} />
+      <Route path="/vision" element={Vision} />
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
