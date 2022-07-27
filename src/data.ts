@@ -24,7 +24,7 @@ const projectData = [
     color: '#FF5420',
     title: 'Siemens Healthineers',
     bg: siemens,
-    desc: 'One year of full-time job at Siemens Healthineers as an ultrasound engineer',
+    desc: 'One year of full-time job at Siemens Healthineers as an ultrasound engineer'
   },
   {
     key: 2,
@@ -32,7 +32,7 @@ const projectData = [
     color: '#F48636',
     title: 'Omran Soule Co.',
     bg: os,
-    desc: 'Part-time job at Omran Soule Co. as a python developer and full stack engineer',
+    desc: 'Part-time job at Omran Soule Co. as a python developer and full stack engineer'
   },
   {
     key: 3,
@@ -40,7 +40,7 @@ const projectData = [
     color: '#F7EBE1',
     title: 'Robot Path Simulator',
     bg: robot,
-    desc: 'A small script in Python that turns strings into movement commands for a robot',
+    desc: 'A small script in Python that turns strings into movement commands for a robot'
   },
 
   {
@@ -49,7 +49,7 @@ const projectData = [
     color: '#F7C69E',
     title: 'Iran Population Map',
     bg: iran,
-    desc: 'An interactive population map of Iran using React, Python, Deck.gl and Mapbox',
+    desc: 'An interactive population map of Iran using React, Python, Deck.gl and Mapbox'
   },
 
   {
@@ -58,7 +58,7 @@ const projectData = [
     color: '#FECB4B',
     title: 'IoT Boards',
     bg: iot,
-    desc: 'A study on the possibility of imlplementing SBCs into home appliences',
+    desc: 'A study on the possibility of imlplementing SBCs into home appliences'
   },
 
   {
@@ -68,7 +68,7 @@ const projectData = [
     color: '#3D6033',
     title: 'Breaking Bad Characters',
     bg: bb,
-    desc: 'Another small script in Python that outputs episode numbers of Breaking Bad series based on provided charachter input',
+    desc: 'Another small script in Python that outputs episode numbers of Breaking Bad series based on provided charachter input'
   },
 
   {
@@ -77,7 +77,7 @@ const projectData = [
     color: '#7CBD6B',
     title: 'Minecraft Farm Wiki',
     bg: mc,
-    desc: 'A hobby website that deals with technical aspect of Minecraft',
+    desc: 'A hobby website that deals with technical aspect of Minecraft'
   },
 
   {
@@ -86,7 +86,7 @@ const projectData = [
     color: '#2F9A80',
     title: 'Computer Vision and Smart Assistant',
     bg: vision,
-    desc: 'A system that gets inputs from the camera and adapts the assistant based on the situation',
+    desc: 'A system that gets inputs from the camera and adapts the assistant based on the situation'
   },
 
   {
@@ -95,7 +95,7 @@ const projectData = [
     color: '#00FFCC',
     title: 'Personal Website v4.0',
     bg: four,
-    desc: 'This website! Created with React',
+    desc: 'This website! Created with React'
   },
 
   {
@@ -104,7 +104,7 @@ const projectData = [
     color: '#30D9D9',
     title: 'Object and QR code Detection',
     bg: qr,
-    desc: 'A Python project to navigate a drone based on the camera input and scan QR codes to gather points',
+    desc: 'A Python project to navigate a drone based on the camera input and scan QR codes to gather points'
   },
 
   {
@@ -113,7 +113,7 @@ const projectData = [
     color: '#011936',
     title: 'Task Tracker',
     bg: task,
-    desc: 'A simple task tracker in React',
+    desc: 'A simple task tracker in React'
   },
 
   {
@@ -122,7 +122,7 @@ const projectData = [
     color: '#323840',
     title: 'Personal Website v2.0',
     bg: two,
-    desc: "Previous version of my personal website. It's in Vanilla JS",
+    desc: "Previous version of my personal website. It's in Vanilla JS"
   },
 
   {
@@ -131,7 +131,7 @@ const projectData = [
     color: '#A3ACBF',
     title: 'Disk Sorter',
     bg: disk,
-    desc: 'A disk sorter based on varying thicknesses of disks.',
+    desc: 'A disk sorter based on varying thicknesses of disks.'
   },
 
   {
@@ -140,7 +140,7 @@ const projectData = [
     color: '#252140',
     title: 'Autonomous Vehicle Components',
     bg: av,
-    desc: "My bachelor's thesis. A study on different methods and components of autopilot systems with the goal of implementing said systems into ordinary vehicles",
+    desc: "My bachelor's thesis. A study on different methods and components of autopilot systems with the goal of implementing said systems into ordinary vehicles"
   },
 
   {
@@ -149,7 +149,7 @@ const projectData = [
     color: '#F7C8D6',
     title: 'Hamrahan Atebba Co.',
     bg: ha,
-    desc: 'Part-time job at Hamrahan Atebba Co. as an IT manager and full stack engineer',
+    desc: 'Part-time job at Hamrahan Atebba Co. as an IT manager and full stack engineer'
   },
 
   {
@@ -158,8 +158,8 @@ const projectData = [
     color: '#B3444F',
     title: 'Self-balancing Robot',
     bg: board,
-    desc: 'A self-balancing transportation robot',
-  },
+    desc: 'A self-balancing transportation robot'
+  }
 ];
 
 export default projectData;
