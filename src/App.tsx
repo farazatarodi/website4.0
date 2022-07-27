@@ -21,57 +21,58 @@ import './css/Three.css';
 import './css/Four.css';
 import './css/mobile.css';
 import './css/project.css';
+import React from 'react';
 
 // scroll animations function
-var oldLeft = 0;
-var left = false;
-var oldSec = 0;
-var curSec = 0;
-var startTimer = 0;
-var walkTimer = 0;
-var sRight = 0;
+let oldLeft = 0;
+let left = false;
+let oldSec = 0;
+let curSec = 0;
+let startTimer: ReturnType<typeof setTimeout>;
+let walkTimer: ReturnType<typeof setTimeout>;
+let sRight = 0;
 
 const scrollAnims = () => {
-  const container = document.querySelector('.scroll-container');
-  const doggo = document.querySelector('.doggo');
+  const container = document.querySelector('.scroll-container') as HTMLElement;
+  const doggo = document.querySelector('.doggo') as HTMLElement;
 
   // Find direction of scroll
-  if (oldLeft > container.scrollLeft) {
+  if (oldLeft > container!.scrollLeft) {
     left = true;
-  } else if (oldLeft < container.scrollLeft) {
+  } else if (oldLeft < container!.scrollLeft) {
     left = false;
   }
-  oldLeft = container.scrollLeft;
+  oldLeft = container!.scrollLeft;
 
   // Calculate current section number
-  curSec = container.scrollLeft / window.innerWidth;
+  curSec = container!.scrollLeft / window.innerWidth;
 
   // Check if fully scrolled
   if (Number.isInteger(curSec)) {
     if (curSec !== oldSec) {
       // Set transition to 0s
-      doggo.style.transition = 'left 0s linear';
+      doggo!.style.transition = 'left 0s linear';
 
       // Set initial position
       if (left) {
-        doggo.style.left = (curSec + 1.05) * window.innerWidth + 'px';
+        doggo!.style.left = (curSec + 1.05) * window.innerWidth + 'px';
       } else {
-        doggo.style.left = (curSec - 0.05) * window.innerWidth + 'px';
+        doggo!.style.left = (curSec - 0.05) * window.innerWidth + 'px';
       }
 
       // Set animation back to  1s
       clearTimeout(startTimer);
       startTimer = setTimeout(() => {
-        doggo.style.transition = 'left 1s linear';
-        doggo.style.animation = 'bg 0.5s steps(1) infinite alternate';
+        doggo!.style.transition = 'left 1s linear';
+        doggo!.style.animation = 'bg 0.5s steps(1) infinite alternate';
 
         // Photo and position based on direction
         if (left) {
-          doggo.style.left = (curSec + 0.95) * window.innerWidth + 'px';
-          doggo.style.transform = 'translate(-50%) scaleX(-1)';
+          doggo!.style.left = (curSec + 0.95) * window.innerWidth + 'px';
+          doggo!.style.transform = 'translate(-50%) scaleX(-1)';
         } else {
-          doggo.style.left = (curSec + 0.05) * window.innerWidth + 'px';
-          doggo.style.transform = 'translate(-50%) scaleX(1)';
+          doggo!.style.left = (curSec + 0.05) * window.innerWidth + 'px';
+          doggo!.style.transform = 'translate(-50%) scaleX(1)';
         }
       }, 100);
     }
@@ -84,24 +85,20 @@ const scrollAnims = () => {
   // Set timer for sitting position photo
   walkTimer = setTimeout(() => {
     if (
-      doggo.offsetLeft === Math.round((curSec + 0.95) * window.innerWidth) ||
-      doggo.offsetLeft === Math.round((curSec + 0.05) * window.innerWidth)
+      doggo!.offsetLeft === Math.round((curSec + 0.95) * window.innerWidth) ||
+      doggo!.offsetLeft === Math.round((curSec + 0.05) * window.innerWidth)
     ) {
-      doggo.style.animation = 'ogbg 0s linear';
+      doggo!.style.animation = 'ogbg 0s linear';
     }
   }, 1200);
 
   // right value for GIT
-  sRight = 4 * window.innerWidth - container.scrollLeft;
-  const git1 = document.querySelector('#git1');
-  const git2 = document.querySelector('#git2');
+  sRight = 4 * window.innerWidth - container!.scrollLeft;
+  const git1 = document.querySelector('#git1') as HTMLElement;
+  const git2 = document.querySelector('#git2') as HTMLElement;
   if (curSec > 2) {
-    git1.style.transform = `translate(-${
-      (sRight / window.innerWidth - 0.8) * 550
-    }%, 0)`;
-    git2.style.transform = `translate(-${
-      (sRight / window.innerWidth - 0.9) * 450
-    }%, 100%)`;
+    git1!.style.transform = `translate(-${(sRight / window.innerWidth - 0.8) * 550}%, 0)`;
+    git2!.style.transform = `translate(-${(sRight / window.innerWidth - 0.9) * 450}%, 100%)`;
   }
 };
 
@@ -114,10 +111,9 @@ function App() {
     <div
       className="App"
       onLoad={() => {
-        const html = document.querySelector('.main-html');
-        html.style.fontSize = `${(window.innerWidth / 1920) * 16}px`;
-      }}
-    >
+        const html = document.querySelector('.main-html') as HTMLElement;
+        html!.style.fontSize = `${(window.innerWidth / 1920) * 16}px`;
+      }}>
       {/* container for scroll snap */}
       <div className="scroll-container" onScroll={scrollAnims}>
         {/* Header */}
@@ -159,40 +155,35 @@ function App() {
             <div className="text-wrapper">
               <div className="hello">Hello World,</div>
               <div className="me">
-                I'm Faraz Atarodi, an electromechanical engineer and developer
-                based in Leuven, Belgium.
+                I&apos;m Faraz Atarodi, an electromechanical engineer and developer based in Leuven,
+                Belgium.
                 <br />
-                As an engineer, I have worked in several part-time engineering
-                jobs while studying and I was a full-time on-site engineer in
-                Siemens for one year between my studies.
+                As an engineer, I have worked in several part-time engineering jobs while studying
+                and I was a full-time on-site engineer in Siemens for one year between my studies.
                 <br />
-                As a developer, alongside my part-time jobs I have participated
-                in programming projects in different fields, such as data
-                science and computer vision. I have experience with both high
-                and low-level languages such as Python, JavaScript, C/C++, Java,
-                VBA and Assembly. Currently, I invest most of my time in Python
-                and JS as they are the most suitable for my projects. But, I'm
-                always up for a challenge and would love to take on new
-                languages and projects in the near future.
+                As a developer, alongside my part-time jobs I have participated in programming
+                projects in different fields, such as data science and computer vision. I have
+                experience with both high and low-level languages such as Python, JavaScript, C/C++,
+                Java, VBA and Assembly. Currently, I invest most of my time in Python and JS as they
+                are the most suitable for my projects. But, I&apos;m always up for a challenge and
+                would love to take on new languages and projects in the near future.
                 <br />
-                I'm looking for new opportunities to expand my experience and
-                knowledge.
+                I&apos;m looking for new opportunities to expand my experience and knowledge.
               </div>
               <div
                 className="more"
                 onClick={() => {
-                  const text = document.querySelector('.text-wrapper');
-                  const more = document.querySelector('.more');
+                  const text = document.querySelector('.text-wrapper') as HTMLElement;
+                  const more = document.querySelector('.more') as HTMLElement;
                   if (!clicked) {
-                    text.style.overflowY = 'visible';
-                    more.style.position = 'relative';
+                    text!.style.overflowY = 'visible';
+                    more!.style.position = 'relative';
                   } else {
-                    text.style.overflowY = 'hidden';
-                    more.style.position = 'absolute';
+                    text!.style.overflowY = 'hidden';
+                    more!.style.position = 'absolute';
                   }
                   setClicked(!clicked);
-                }}
-              >
+                }}>
                 {clicked ? '...less' : 'more...'}
               </div>
             </div>
@@ -242,16 +233,25 @@ function App() {
         {/* 3. Experiences section */}
         <section className="three" id="experiences">
           <div className="project-wrapper">
-            {projectData.map(({ key, id, color, title, bg, desc }) => (
-              <Project
-                key={key}
-                id={id}
-                color={color}
-                title={title}
-                bg={bg}
-                desc={desc}
-              />
-            ))}
+            {projectData.map(
+              ({
+                key,
+                id,
+                color,
+                title,
+                bg,
+                desc
+              }: {
+                key: number;
+                id: string;
+                color: string;
+                title: string;
+                bg: MediaImage;
+                desc: string;
+              }) => (
+                <Project key={key} id={id} color={color} title={title} bg={bg} desc={desc} />
+              )
+            )}
           </div>
         </section>
 
@@ -269,10 +269,7 @@ function App() {
                     <img src={linkArrow} alt="" className="link-arrow" />
                   </a>
                   <br />
-                  <a
-                    href="mailto:f.atarodi.contact@gmail.com"
-                    className="links"
-                  >
+                  <a href="mailto:f.atarodi.contact@gmail.com" className="links">
                     f.atarodi.contact@gmail.com
                     <img src={linkArrow} alt="" className="link-arrow" />
                   </a>
@@ -287,8 +284,7 @@ function App() {
                     className="links"
                     href="https://www.linkedin.com/in/faraz-atarodi/"
                     target="_blank"
-                    rel="noreferrer"
-                  >
+                    rel="noreferrer">
                     LinkedIn
                     <img src={linkArrow} alt="" className="link-arrow" />
                   </a>
@@ -297,8 +293,7 @@ function App() {
                     className="links"
                     href="https://www.facebook.com/f.atarodi"
                     target="_blank"
-                    rel="noreferrer"
-                  >
+                    rel="noreferrer">
                     Facebook
                     <img src={linkArrow} alt="" className="link-arrow" />
                   </a>
@@ -309,12 +304,7 @@ function App() {
               <div className="cv">
                 CV
                 <div className="contact-links">
-                  <a
-                    className="links"
-                    href={cv}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
+                  <a className="links" href={cv} target="_blank" rel="noreferrer">
                     View
                     <img src={linkArrow} alt="" className="link-arrow" />
                   </a>
@@ -323,8 +313,7 @@ function App() {
                     className="links"
                     href="https://drive.google.com/uc?export=download&id=1p1vC4Jvnc5EcstR-SmMV2-WX3xkP8eVj"
                     target="_blank"
-                    rel="noreferrer"
-                  >
+                    rel="noreferrer">
                     Download
                     <img src={linkArrow} alt="" className="link-arrow" />
                   </a>
@@ -333,8 +322,7 @@ function App() {
                     className="links"
                     href="https://github.com/farazatarodi"
                     target="_blank"
-                    rel="noreferrer"
-                  >
+                    rel="noreferrer">
                     Github
                     <img src={linkArrow} alt="" className="link-arrow" />
                   </a>
