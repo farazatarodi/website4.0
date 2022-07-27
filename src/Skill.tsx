@@ -9,10 +9,11 @@ import python from './media/logos/python.png';
 import react from './media/logos/react.png';
 import unity from './media/logos/unity.png';
 import vba from './media/logos/vba.png';
+import React from 'react';
 
-const Skill = ({ id }) => {
-  var text = '';
-  var logoSrc = c;
+const Skill = ({ id }: { id: string }) => {
+  let text = '';
+  let logoSrc = c;
   if (id === 'C1') {
     text = 'C/C++';
   } else if (id === 'C2') {
@@ -49,8 +50,8 @@ const Skill = ({ id }) => {
     <span
       id={id}
       onMouseOver={() => {
-        const skill = document.querySelector('#' + id);
-        const logo = document.querySelector('.logo');
+        const skill = document.querySelector('#' + id) as HTMLElement;
+        const logo = document.querySelector('.logo') as HTMLImageElement;
 
         // increase scale on hover
         skill.style.transform = 'scale(1.2, 1.2)';
@@ -59,24 +60,23 @@ const Skill = ({ id }) => {
         logo.src = logoSrc;
       }}
       onMouseLeave={() => {
-        const skill = document.querySelector('#' + id);
+        const skill = document.querySelector('#' + id) as HTMLElement;
 
         // decrease scale on leave
         skill.style.transform = 'scale(1, 1)';
 
         // hide logo cursor
-        const logo = document.querySelector('.logo');
+        const logo = document.querySelector('.logo') as HTMLImageElement;
         logo.style.display = 'none';
       }}
       onMouseMove={(e) => {
-        const logo = document.querySelector('.logo');
+        const logo = document.querySelector('.logo') as HTMLImageElement;
 
         // show and move logo cursor
         logo.style.display = 'block';
         logo.style.left = e.pageX + 'px';
         logo.style.top = e.pageY + 'px';
-      }}
-    >
+      }}>
       {text}
     </span>
   );
