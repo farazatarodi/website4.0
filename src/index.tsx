@@ -27,22 +27,22 @@ ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
       <Route path="/" element={<App />} />
-      <Route path="/av" element={AV} />
-      <Route path="/bb" element={BB} />
-      <Route path="/board" element={Board} />
-      <Route path="/disk" element={Disk} />
-      <Route path="/four" element={Four} />
-      <Route path="/ha" element={HA} />
-      <Route path="/iot" element={IoT} />
-      <Route path="/iran" element={Iran} />
-      <Route path="/mc" element={MC} />
-      <Route path="/os" element={OS} />
-      <Route path="/qr" element={QR} />
-      <Route path="/robot" element={Robot} />
-      <Route path="/siemens" element={Siemens} />
-      <Route path="/task" element={Task} />
-      <Route path="/two" element={Two} />
-      <Route path="/vision" element={Vision} />
+      <Route path="/av" element={<AV />} />
+      <Route path="/bb" element={<BB />} />
+      <Route path="/board" element={<Board />} />
+      <Route path="/disk" element={<Disk />} />
+      <Route path="/four" element={<Four />} />
+      <Route path="/ha" element={<HA />} />
+      <Route path="/iot" element={<IoT />} />
+      <Route path="/iran" element={<Iran />} />
+      <Route path="/mc" element={<MC />} />
+      <Route path="/os" element={<OS />} />
+      <Route path="/qr" element={<QR />} />
+      <Route path="/robot" element={<Robot />} />
+      <Route path="/siemens" element={<Siemens />} />
+      <Route path="/task" element={<Task />} />
+      <Route path="/two" element={<Two />} />
+      <Route path="/vision" element={<Vision />} />
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
