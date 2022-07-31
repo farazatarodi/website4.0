@@ -1,6 +1,9 @@
-import Nav from './Nav';
-import bg from '../media/title/robot.png';
+import React from 'react';
+
 import linkArrow from '../media/diagonal-arrow.png';
+import bg from '../media/title/robot.png';
+
+import Nav from './Nav';
 
 const Robot = () => {
   return (
@@ -24,8 +27,7 @@ const Robot = () => {
                 className="links"
                 href="https://github.com/farazatarodi/robot-simulator"
                 target="_blank"
-                rel="noreferrer"
-              >
+                rel="noreferrer">
                 View Code
                 <img src={linkArrow} alt="" className="link-arrow" />
               </a>

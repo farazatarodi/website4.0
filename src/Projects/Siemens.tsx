@@ -1,5 +1,8 @@
-import Nav from './Nav';
+import React from 'react';
+
 import bg from '../media/title/siemens.jpg';
+
+import Nav from './Nav';
 
 const Siemens = () => {
   return (

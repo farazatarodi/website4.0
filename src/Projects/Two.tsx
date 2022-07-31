@@ -1,6 +1,9 @@
-import Nav from './Nav';
-import bg from '../media/title/2.0.png';
+import React from 'react';
+
 import linkArrow from '../media/diagonal-arrow.png';
+import bg from '../media/title/2.0.png';
+
+import Nav from './Nav';
 
 const Two = () => {
   return (
@@ -24,8 +27,7 @@ const Two = () => {
                 className="links"
                 href="https://farazatarodi.github.io/website2.0/"
                 target="_blank"
-                rel="noreferrer"
-              >
+                rel="noreferrer">
                 View Website
                 <img src={linkArrow} alt="" className="link-arrow" />
               </a>

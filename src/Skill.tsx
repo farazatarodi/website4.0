@@ -1,5 +1,7 @@
-import c from './media/logos/c.png';
+import React from 'react';
+
 import c2 from './media/logos/c#.png';
+import c from './media/logos/c.png';
 import css from './media/logos/css.png';
 import html from './media/logos/html.png';
 import java from './media/logos/java.png';
@@ -9,7 +11,6 @@ import python from './media/logos/python.png';
 import react from './media/logos/react.png';
 import unity from './media/logos/unity.png';
 import vba from './media/logos/vba.png';
-import React from 'react';
 
 const Skill = ({ id }: { id: string }) => {
   let text = '';

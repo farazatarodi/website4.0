@@ -1,6 +1,9 @@
-import Nav from './Nav';
-import bg from '../media/title/iran.png';
+import React from 'react';
+
 import linkArrow from '../media/diagonal-arrow.png';
+import bg from '../media/title/iran.png';
+
+import Nav from './Nav';
 
 const Iran = () => {
   return (
@@ -17,16 +20,14 @@ const Iran = () => {
             <div className="pr-desc">Developer</div>
             <div className="pr-desc-title">Technologies:</div>
             <div className="pr-desc" style={{ marginBottom: '1rem' }}>
-              React - Mapbox - deck.gl - Python - CSS - HTML - Excel - CSV -
-              JSON
+              React - Mapbox - deck.gl - Python - CSS - HTML - Excel - CSV - JSON
             </div>
             <div className="pr-link">
               <a
                 className="links"
                 href="https://farazatarodi.github.io/IranPopulationMap/"
                 target="_blank"
-                rel="noreferrer"
-              >
+                rel="noreferrer">
                 View Website
                 <img src={linkArrow} alt="" className="link-arrow" />
               </a>

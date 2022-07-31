@@ -1,4 +1,5 @@
 import React from 'react';
+
 import bone from './media/doggo/bone.png';
 
 // doggo follow function

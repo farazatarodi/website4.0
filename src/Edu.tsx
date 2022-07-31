@@ -1,6 +1,7 @@
-import sharif from './media/logos/sharif.png';
-import kul from './media/logos/kuleuven.png';
 import React from 'react';
+
+import kul from './media/logos/kuleuven.png';
+import sharif from './media/logos/sharif.png';
 
 const Edu = ({ id }: { id: string }) => {
   let text = '';

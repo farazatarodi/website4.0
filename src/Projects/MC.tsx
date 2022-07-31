@@ -1,6 +1,9 @@
-import Nav from './Nav';
-import bg from '../media/title/mc.png';
+import React from 'react';
+
 import linkArrow from '../media/diagonal-arrow.png';
+import bg from '../media/title/mc.png';
+
+import Nav from './Nav';
 
 const MC = () => {
   return (
@@ -24,8 +27,7 @@ const MC = () => {
                 className="links"
                 href="https://minecraftfarms.net/"
                 target="_blank"
-                rel="noreferrer"
-              >
+                rel="noreferrer">
                 View Website
                 <img src={linkArrow} alt="" className="link-arrow" />
               </a>

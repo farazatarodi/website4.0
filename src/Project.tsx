@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+
 import linkArrow from './media/diagonal-arrow.png';
 
 const Project = ({
@@ -9,7 +10,7 @@ const Project = ({
   bg,
   desc
 }: {
-  id: number;
+  id: string;
   color: string;
   title: string;
   bg: MediaImage;

@@ -1,6 +1,9 @@
-import Nav from './Nav';
-import bg from '../media/title/task.png';
+import React from 'react';
+
 import linkArrow from '../media/diagonal-arrow.png';
+import bg from '../media/title/task.png';
+
+import Nav from './Nav';
 
 const Task = () => {
   return (
@@ -24,8 +27,7 @@ const Task = () => {
                 className="links"
                 href="https://github.com/farazatarodi/react-task-tracker"
                 target="_blank"
-                rel="noreferrer"
-              >
+                rel="noreferrer">
                 View Code
                 <img src={linkArrow} alt="" className="link-arrow" />
               </a>

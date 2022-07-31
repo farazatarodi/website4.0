@@ -1,5 +1,8 @@
-import Nav from './Nav';
+import React from 'react';
+
 import bg from '../media/title/vision.jpg';
+
+import Nav from './Nav';
 
 const Vision = () => {
   return (

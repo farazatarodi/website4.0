@@ -1,5 +1,8 @@
-import Nav from './Nav';
+import React from 'react';
+
 import bg from '../media/title/qr.png';
+
+import Nav from './Nav';
 
 const QR = () => {
   return (

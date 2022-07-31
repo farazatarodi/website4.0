@@ -1,5 +1,8 @@
-import Nav from './Nav';
+import React from 'react';
+
 import bg from '../media/title/os2.png';
+
+import Nav from './Nav';
 
 const OS = () => {
   return (
@@ -13,9 +16,7 @@ const OS = () => {
             <div className="pr-desc-title">Type:</div>
             <div className="pr-desc">Part-time Job</div>
             <div className="pr-desc-title">Role:</div>
-            <div className="pr-desc">
-              Full-stack Engineer / Python Developer
-            </div>
+            <div className="pr-desc">Full-stack Engineer / Python Developer</div>
             <div className="pr-desc-title">Technologies:</div>
             <div className="pr-desc" style={{ marginBottom: '1rem' }}>
               Python - JavaScript - CSS - HTML - VBA - SQL

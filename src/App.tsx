@@ -1,18 +1,16 @@
+import React, { useState } from 'react';
+
+import ContactForm from './ContactForm';
 import Doggo from './Doggo';
-import Skill from './Skill';
 import Edu from './Edu';
 import Project from './Project';
-import ContactForm from './ContactForm';
-import { useState } from 'react';
+import Skill from './Skill';
 import projectData from './data';
-
-// import media
-import linkArrow from './media/diagonal-arrow.png';
 import cv from './media/Faraz Atarodi - CV.pdf';
-import python from './media/logos/python.png';
+import linkArrow from './media/diagonal-arrow.png';
 import scroll from './media/down-arrow.png';
+import python from './media/logos/python.png';
 
-// import css files
 import './css/App.css';
 import './css/Doggo.css';
 import './css/One.css';
@@ -21,7 +19,6 @@ import './css/Three.css';
 import './css/Four.css';
 import './css/mobile.css';
 import './css/project.css';
-import React from 'react';
 
 // scroll animations function
 let oldLeft = 0;
