@@ -1,16 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-import ContactForm from './ContactForm';
 import Doggo from './Doggo';
-import Edu from './Edu';
-import Project from './Project';
-import Skill from './Skill';
-import projectData from './data';
-import cv from './media/Faraz Atarodi - CV.pdf';
-import linkArrow from './media/diagonal-arrow.png';
-import scroll from './media/down-arrow.png';
-import python from './media/logos/python.png';
-
 import './css/App.css';
 import './css/Doggo.css';
 import './css/One.css';
@@ -19,6 +9,11 @@ import './css/Three.css';
 import './css/Four.css';
 import './css/mobile.css';
 import './css/project.css';
+import Navigation from './Navigation';
+import About from './sections/About';
+import Contact from './sections/Contact';
+import Experiences from './sections/Experiences';
+import Home from './sections/Home';
 
 // scroll animations function
 let oldLeft = 0;
@@ -100,252 +95,19 @@ const scrollAnims = () => {
 };
 
 // Main
-function App() {
+const App = () => {
   // more boolean
-  const [clicked, setClicked] = useState(false);
 
   return (
-    <div>
-      {/* container for scroll snap */}
-      <div className="scroll-container" onScroll={scrollAnims}>
-        {/* Header */}
-        <div className="header">
-          <div className="sec1">
-            <a href="#home">HOME</a>
-            <a href="#about">ABOUT</a>
-            <a href="#experiences">EXPERIENCES</a>
-            <a href="#contact">CONTACT</a>
-          </div>
-          <div className="sec2">
-            <div>GHENT - BELGIUM</div>
-          </div>
-        </div>
-
-        {/* 1. Home section */}
-        <section className="one" id="home">
-          {/* Content */}
-          <div className="name">Faraz Atarodi</div>
-          <div className="title typing">
-            {'{'}
-            <span style={{ color: '#00ffcc' }}>developer</span>
-            {'}'}
-          </div>
-
-          {/* Scroll right animation */}
-          <div className="scroll-animation">
-            <div>
-              Hold Shift
-              <br />& Scroll
-            </div>
-            <img src={scroll} alt=""></img>
-          </div>
-        </section>
-
-        {/* 2. About section */}
-        <section className="two" id="about">
-          <div className="about1">
-            <div className="text-wrapper">
-              <div className="hello">Hello World,</div>
-              <div className="me">
-                I&apos;m Faraz Atarodi, an electromechanical engineer and developer based in Leuven,
-                Belgium.
-                <br />
-                As an engineer, I have worked in several part-time engineering jobs while studying
-                and I was a full-time on-site engineer in Siemens for one year between my studies.
-                <br />
-                As a developer, alongside my part-time jobs I have participated in programming
-                projects in different fields, such as data science and computer vision. I have
-                experience with both high and low-level languages such as Python, JavaScript, C/C++,
-                Java, VBA and Assembly. Currently, I invest most of my time in Python and JS as they
-                are the most suitable for my projects. But, I&apos;m always up for a challenge and
-                would love to take on new languages and projects in the near future.
-                <br />
-                I&apos;m looking for new opportunities to expand my experience and knowledge.
-              </div>
-              <div
-                className="more"
-                onClick={() => {
-                  const text = document.querySelector('.text-wrapper') as HTMLElement;
-                  const more = document.querySelector('.more') as HTMLElement;
-                  if (!clicked) {
-                    text!.style.overflowY = 'visible';
-                    more!.style.position = 'relative';
-                  } else {
-                    text!.style.overflowY = 'hidden';
-                    more!.style.position = 'absolute';
-                  }
-                  setClicked(!clicked);
-                }}>
-                {clicked ? '...less' : 'more...'}
-              </div>
-            </div>
-          </div>
-          <div className="about2">
-            <div className="skills-wrapper">
-              <div className="skills-title">Skills</div>
-
-              {/* skills components */}
-              <div className="skills">
-                <Skill id="Python" />
-                <span> - </span>
-                <Skill id="React" />
-                <span> - </span>
-                <Skill id="JavaScript" />
-                <span> - </span>
-                <Skill id="CSS" />
-                <span> - </span>
-                <Skill id="HTML" />
-                <span> - </span>
-                <Skill id="PHP" />
-                <span> - </span>
-                <Skill id="Java" />
-                <span> - </span>
-                <Skill id="C1" />
-                <span> - </span>
-                <Skill id="VBA" />
-                <span> - </span>
-                <Skill id="C2" />
-                <span> - </span>
-                <Skill id="Unity" />
-              </div>
-            </div>
-
-            {/* education div */}
-            <div className="edu">
-              <div className="edu-title">Education</div>
-              <Edu id="Sharif" />
-              <Edu id="KUL" />
-            </div>
-          </div>
-
-          {/* skill bg logo */}
-          <img src={python} alt="" className="logo" />
-        </section>
-
-        {/* 3. Experiences section */}
-        <section className="three" id="experiences">
-          <div className="project-wrapper">
-            {projectData.map(
-              ({
-                key,
-                id,
-                color,
-                title,
-                bg,
-                desc
-              }: {
-                key: number;
-                id: string;
-                color: string;
-                title: string;
-                bg: MediaImage;
-                desc: string;
-              }) => (
-                <Project key={key} id={id} color={color} title={title} bg={bg} desc={desc} />
-              )
-            )}
-          </div>
-        </section>
-
-        {/* 4. Contact section */}
-        <section id="contact" className="four">
-          <div className="contact-wrapper">
-            {/* left side */}
-            <div className="contact1">
-              {/* info div */}
-              <div className="details">
-                Info
-                <div className="contact-links">
-                  <a href="tel:+32492839028" className="links">
-                    +32 492 83 92 28
-                    <img src={linkArrow} alt="" className="link-arrow" />
-                  </a>
-                  <br />
-                  <a href="mailto:f.atarodi.contact@gmail.com" className="links">
-                    f.atarodi.contact@gmail.com
-                    <img src={linkArrow} alt="" className="link-arrow" />
-                  </a>
-                </div>
-              </div>
-
-              {/* social div */}
-              <div className="social">
-                Social Media
-                <div className="contact-links">
-                  <a
-                    className="links"
-                    href="https://www.linkedin.com/in/faraz-atarodi/"
-                    target="_blank"
-                    rel="noreferrer">
-                    LinkedIn
-                    <img src={linkArrow} alt="" className="link-arrow" />
-                  </a>
-                  <br />
-                  <a
-                    className="links"
-                    href="https://www.facebook.com/f.atarodi"
-                    target="_blank"
-                    rel="noreferrer">
-                    Facebook
-                    <img src={linkArrow} alt="" className="link-arrow" />
-                  </a>
-                </div>
-              </div>
-
-              {/* cv div */}
-              <div className="cv">
-                CV
-                <div className="contact-links">
-                  <a className="links" href={cv} target="_blank" rel="noreferrer">
-                    View
-                    <img src={linkArrow} alt="" className="link-arrow" />
-                  </a>
-                  <br />
-                  <a
-                    className="links"
-                    href="https://drive.google.com/uc?export=download&id=1p1vC4Jvnc5EcstR-SmMV2-WX3xkP8eVj"
-                    target="_blank"
-                    rel="noreferrer">
-                    Download
-                    <img src={linkArrow} alt="" className="link-arrow" />
-                  </a>
-                  <br />
-                  <a
-                    className="links"
-                    href="https://github.com/farazatarodi"
-                    target="_blank"
-                    rel="noreferrer">
-                    Github
-                    <img src={linkArrow} alt="" className="link-arrow" />
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            {/* right side */}
-            <div className="contact2">
-              {/* main form */}
-              <div>Direct</div>
-              <div style={{ height: '55%' }}>
-                <ContactForm />
-              </div>
-            </div>
-          </div>
-
-          {/* get in touch bg */}
-          <div id="git1" className="git">
-            GET IN
-          </div>
-          <div id="git2" className="git">
-            TOUCH
-          </div>
-        </section>
-
-        {/* doggo section */}
-        <Doggo />
-      </div>
+    <div className="scroll-container" onScroll={scrollAnims}>
+      <Navigation />
+      <Home />
+      <About />
+      <Experiences />
+      <Contact />
+      <Doggo />
     </div>
   );
-}
+};
 
 export default App;
