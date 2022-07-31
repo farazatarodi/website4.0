@@ -3,7 +3,8 @@ import ReactDOM from 'react-dom';
 import './css/index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { BrowserRouter, Route } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { createRoot } from 'react-dom/client';
 
 // import project pages
 import AV from './Projects/AV';
@@ -23,29 +24,32 @@ import Task from './Projects/Task';
 import Two from './Projects/Two';
 import Vision from './Projects/Vision';
 
-ReactDOM.render(
+const container = document.getElementById('root');
+const root = createRoot(container!);
+root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <Route path="/" element={<App />} />
-      <Route path="/av" element={<AV />} />
-      <Route path="/bb" element={<BB />} />
-      <Route path="/board" element={<Board />} />
-      <Route path="/disk" element={<Disk />} />
-      <Route path="/four" element={<Four />} />
-      <Route path="/ha" element={<HA />} />
-      <Route path="/iot" element={<IoT />} />
-      <Route path="/iran" element={<Iran />} />
-      <Route path="/mc" element={<MC />} />
-      <Route path="/os" element={<OS />} />
-      <Route path="/qr" element={<QR />} />
-      <Route path="/robot" element={<Robot />} />
-      <Route path="/siemens" element={<Siemens />} />
-      <Route path="/task" element={<Task />} />
-      <Route path="/two" element={<Two />} />
-      <Route path="/vision" element={<Vision />} />
+      <Routes>
+        <Route path="/" element={<App />} />
+        <Route path="/av" element={<AV />} />
+        <Route path="/bb" element={<BB />} />
+        <Route path="/board" element={<Board />} />
+        <Route path="/disk" element={<Disk />} />
+        <Route path="/four" element={<Four />} />
+        <Route path="/ha" element={<HA />} />
+        <Route path="/iot" element={<IoT />} />
+        <Route path="/iran" element={<Iran />} />
+        <Route path="/mc" element={<MC />} />
+        <Route path="/os" element={<OS />} />
+        <Route path="/qr" element={<QR />} />
+        <Route path="/robot" element={<Robot />} />
+        <Route path="/siemens" element={<Siemens />} />
+        <Route path="/task" element={<Task />} />
+        <Route path="/two" element={<Two />} />
+        <Route path="/vision" element={<Vision />} />
+      </Routes>
     </BrowserRouter>
-  </React.StrictMode>,
-  document.getElementById('root')
+  </React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function
