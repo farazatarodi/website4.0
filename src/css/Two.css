@@ -55,7 +55,7 @@
 .skills-title {
   font-weight: 700;
   font-size: 3rem;
-  margin: 1rem 0rem;
+  margin: 1rem 0;
 }
 
 .edu div {
@@ -66,7 +66,7 @@
 .edu span {
   font-size: 1.2rem;
   cursor: pointer;
-  margin: 0rem 1rem;
+  margin: 0 1rem;
   line-height: 2rem;
 }
 
@@ -79,7 +79,7 @@
   font-size: 2.5rem;
   font-weight: 700;
   color: var(--bg);
-  margin: 1rem 0rem;
+  margin: 1rem 0;
   text-align: justify;
   display: flex;
   flex-wrap: wrap;
@@ -108,12 +108,15 @@
   0% {
     transform: translate(-50%, -50%) scale(0.5, 0.5) rotate(0deg);
   }
+
   40% {
     transform: translate(-50%, -50%) scale(1, 1) rotate(360deg);
   }
+
   60% {
     transform: translate(-50%, -50%) scale(1, 1) rotate(360deg);
   }
+
   100% {
     transform: translate(-50%, -50%) scale(0.5, 0.5) rotate(0deg);
   }

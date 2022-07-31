@@ -34,7 +34,7 @@
   bottom: 0%;
   transform-origin: 0 0;
   transform: translate(0%, 50%) rotate(-90deg);
-  text-shadow: -1px 1px 5px rgba(0, 0, 0, 0.3), 1px -1px 5px rgba(0, 0, 0, 0.3);
+  text-shadow: -1px 1px 5px rgb(0 0 0 / 30%), 1px -1px 5px rgb(0 0 0 / 30%);
   transition: transform 0.2s ease-in-out;
 }
 
@@ -42,13 +42,14 @@
   position: relative;
   font-size: 1.2rem;
   display: none;
-  text-shadow: -1px 1px 5px rgba(0, 0, 0, 0.3), 1px -1px 5px rgba(0, 0, 0, 0.3);
+  text-shadow: -1px 1px 5px rgb(0 0 0 / 30%), 1px -1px 5px rgb(0 0 0 / 30%);
 }
 
 @keyframes show {
   0% {
     visibility: hidden;
   }
+
   100% {
     visibility: visible;
   }

@@ -51,7 +51,7 @@
   font-weight: 300;
 }
 
-.links:before {
+.links::before {
   content: '';
   position: absolute;
   width: 100%;
@@ -65,7 +65,7 @@
   transition: 0.2s linear;
 }
 
-.links:hover:before {
+.links:hover::before {
   visibility: visible;
   transform: scaleX(1);
 }
@@ -90,7 +90,7 @@
   height: 2rem;
   width: 50%;
   cursor: text;
-  font-family: 'Roboto';
+  font-family: Roboto, sans-serif;
   font-size: 1rem;
   margin-bottom: 1rem;
   border: none;
@@ -100,7 +100,7 @@
 #message {
   height: 40%;
   cursor: text;
-  font-family: 'Roboto';
+  font-family: Roboto, sans-serif;
   font-size: 1rem;
   margin-bottom: 1rem;
 }
@@ -121,7 +121,7 @@
   opacity: 0.8;
 }
 
-.GIT {
+.git {
   position: absolute;
   top: 15%;
   right: 0%;

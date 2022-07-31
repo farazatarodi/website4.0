@@ -62,7 +62,7 @@
   .about1,
   .about2 {
     width: 100%;
-    padding: 0rem 4rem;
+    padding: 0 4rem;
     margin: 0;
   }
 
@@ -109,7 +109,7 @@
     position: absolute;
     flex-direction: column;
     width: 100%;
-    padding: 0rem 4rem;
+    padding: 0 4rem;
     margin: 0;
     height: 90%;
     bottom: 0;
@@ -125,8 +125,7 @@
 
   .contact1 {
     justify-content: space-between;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-flow: row wrap;
     height: 50%;
   }
 
@@ -142,7 +141,7 @@
     width: 100%;
   }
 
-  .GIT {
+  .git {
     top: 40%;
   }
 
@@ -217,7 +216,7 @@
       display: flex;
       position: absolute;
       bottom: 0;
-      color: rgb(97, 97, 97);
+      color: rgb(97 97 97);
       background-color: #141414;
     }
 
@@ -245,7 +244,8 @@
     .links {
       font-size: 1.7rem;
     }
-    .GIT {
+
+    .git {
       font-size: 4rem;
     }
   }

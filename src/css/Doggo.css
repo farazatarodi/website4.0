@@ -27,9 +27,11 @@
   0% {
     background-image: url('../media/doggo/1.png');
   }
+
   50% {
     background-image: url('../media/doggo/2.png');
   }
+
   100% {
     background-image: url('../media/doggo/1.png');
   }

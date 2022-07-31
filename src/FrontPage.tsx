@@ -338,10 +338,10 @@ function App() {
           </div>
 
           {/* get in touch bg */}
-          <div id="git1" className="GIT">
+          <div id="git1" className="git">
             GET IN
           </div>
-          <div id="git2" className="GIT">
+          <div id="git2" className="git">
             TOUCH
           </div>
         </section>
