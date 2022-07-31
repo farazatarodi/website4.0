@@ -105,12 +105,7 @@ function App() {
   const [clicked, setClicked] = useState(false);
 
   return (
-    <div
-      className="App"
-      onLoad={() => {
-        const html = document.querySelector('.main-html') as HTMLElement;
-        html!.style.fontSize = `${(window.innerWidth / 1920) * 16}px`;
-      }}>
+    <div>
       {/* container for scroll snap */}
       <div className="scroll-container" onScroll={scrollAnims}>
         {/* Header */}
