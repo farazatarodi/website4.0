@@ -5,7 +5,6 @@ import './css/FrontPage.css';
 import './css/Doggo.css';
 import './css/One.css';
 import './css/Two.css';
-import './css/Three.css';
 import './css/Four.css';
 import './css/mobile.css';
 import './css/project.css';

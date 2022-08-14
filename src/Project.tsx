@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { CSSProperties, useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 import linkArrow from './media/diagonal-arrow.png';
@@ -16,66 +16,62 @@ const Project = ({
   bg: MediaImage;
   desc: string;
 }) => {
-  // expand project
-  const expand = () => {
-    const project = document.querySelector('#' + id) as HTMLElement;
-    const title = document.querySelector('#' + id + '-title') as HTMLElement;
-    const desc = document.querySelector('#' + id + '-desc') as HTMLElement;
+  const [width, setWidth] = useState(4);
+  const [backGroundImage, setBackGroundImage] = useState('');
+  const [titleRotate, setTitleRotate] = useState('translate(0%, 50%) rotate(-90deg)');
+  const [showDescription, setShowDescription] = useState(false);
+  const [descriptionVisibility, setDescriptionVisibility] =
+    useState<CSSProperties['visibility']>('hidden');
+  const [descriptionDisplay, setDescriptionDisplay] = useState('none');
 
-    // expand project width
-    project.style.width = '15%';
+  let descriptionTimer: ReturnType<typeof setTimeout>;
+  useEffect(() => {
+    if (showDescription) {
+      descriptionTimer = setTimeout(() => setDescriptionVisibility('visible'), 200);
+      setDescriptionDisplay('initial');
+    } else {
+      descriptionTimer = setTimeout(() => setDescriptionVisibility('hidden'));
+      setDescriptionDisplay('none');
+    }
+    return function () {
+      clearTimeout(descriptionTimer);
+    };
+  }, [showDescription]);
 
-    // set project bg
-    project.style.backgroundImage =
+  const handleExpand = () => {
+    setWidth(15);
+    setBackGroundImage(
       'linear-gradient(135deg,' +
-      color +
-      ' 0% ,' +
-      color +
-      ' 35%, rgba(0,0,0,0) 100%), url("' +
-      bg +
-      '")';
-
-    // rotate title
-    title!.style.transform = 'rotate(0deg) translateY(120%)';
-
-    // show description
-    desc!.style.animation = 'show 0.2s steps(1)';
-    desc!.style.display = 'initial';
-    desc!.style.visibility = 'visible';
+        color +
+        ' 0% ,' +
+        color +
+        ' 35%, rgba(0,0,0,0) 100%), url("' +
+        bg +
+        '")'
+    );
+    setTitleRotate('rotate(0deg) translateY(120%)');
+    setShowDescription(true);
   };
 
-  // shrink project
-  const shrink = () => {
-    const project = document.querySelector('#' + id) as HTMLElement;
-    const title = document.querySelector('#' + id + '-title') as HTMLElement;
-    const desc = document.querySelector('#' + id + '-desc') as HTMLElement;
-
-    // shrink project width
-    project!.style.width = '4%';
-
-    // unset project bg
-    project!.style.backgroundImage = '';
-
-    // rotate title
-    title!.style.transform = 'translate(0%, 50%) rotate(-90deg)';
-
-    // hide description
-    desc!.style.animation = '';
-    desc!.style.display = 'none';
-    desc!.style.visibility = 'hidden';
+  const handleShrink = () => {
+    setWidth(4);
+    setBackGroundImage('');
+    setTitleRotate('translate(0%, 50%) rotate(-90deg)');
+    setShowDescription(false);
   };
 
   return (
     <div
-      id={`${id}`}
       className="project"
-      style={{ backgroundColor: color }}
-      onMouseOver={expand}
-      onMouseLeave={shrink}>
-      <div id={id + '-title'} className="project-title">
+      style={{ backgroundColor: color, width: `${width}%`, backgroundImage: backGroundImage }}
+      onMouseOver={handleExpand}
+      onMouseLeave={handleShrink}>
+      <div className="project-title" style={{ transform: titleRotate }}>
         {title}
       </div>
-      <div id={id + '-desc'} className="project-description">
+      <div
+        className="project-description"
+        style={{ visibility: descriptionVisibility, display: descriptionDisplay }}>
         {desc}
         <br />
         <Link

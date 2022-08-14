@@ -19,7 +19,6 @@ import vision from './media/bg/vision.png';
 // project data
 const projectData = [
   {
-    key: 1,
     id: 'siemens',
     color: '#FF5420',
     title: 'Siemens Healthineers',
@@ -27,7 +26,6 @@ const projectData = [
     desc: 'One year of full-time job at Siemens Healthineers as an ultrasound engineer'
   },
   {
-    key: 2,
     id: 'os',
     color: '#F48636',
     title: 'Omran Soule Co.',
@@ -35,7 +33,6 @@ const projectData = [
     desc: 'Part-time job at Omran Soule Co. as a python developer and full stack engineer'
   },
   {
-    key: 3,
     id: 'robot',
     color: '#F7EBE1',
     title: 'Robot Path Simulator',
@@ -44,7 +41,6 @@ const projectData = [
   },
 
   {
-    key: 4,
     id: 'iran',
     color: '#F7C69E',
     title: 'Iran Population Map',
@@ -53,7 +49,6 @@ const projectData = [
   },
 
   {
-    key: 5,
     id: 'iot',
     color: '#FECB4B',
     title: 'IoT Boards',
@@ -62,8 +57,6 @@ const projectData = [
   },
 
   {
-    key: 6,
-
     id: 'bb',
     color: '#3D6033',
     title: 'Breaking Bad Characters',
@@ -72,7 +65,6 @@ const projectData = [
   },
 
   {
-    key: 7,
     id: 'mc',
     color: '#7CBD6B',
     title: 'Minecraft Farm Wiki',
@@ -81,7 +73,6 @@ const projectData = [
   },
 
   {
-    key: 8,
     id: 'vision',
     color: '#2F9A80',
     title: 'Computer Vision and Smart Assistant',
@@ -90,7 +81,6 @@ const projectData = [
   },
 
   {
-    key: 9,
     id: 'four',
     color: '#00FFCC',
     title: 'Personal Website v4.0',
@@ -99,7 +89,6 @@ const projectData = [
   },
 
   {
-    key: 10,
     id: 'qr',
     color: '#30D9D9',
     title: 'Object and QR code Detection',
@@ -108,7 +97,6 @@ const projectData = [
   },
 
   {
-    key: 11,
     id: 'task',
     color: '#011936',
     title: 'Task Tracker',
@@ -117,7 +105,6 @@ const projectData = [
   },
 
   {
-    key: 12,
     id: 'two',
     color: '#323840',
     title: 'Personal Website v2.0',
@@ -126,7 +113,6 @@ const projectData = [
   },
 
   {
-    key: 13,
     id: 'disk',
     color: '#A3ACBF',
     title: 'Disk Sorter',
@@ -135,7 +121,6 @@ const projectData = [
   },
 
   {
-    key: 14,
     id: 'av',
     color: '#252140',
     title: 'Autonomous Vehicle Components',
@@ -144,7 +129,6 @@ const projectData = [
   },
 
   {
-    key: 15,
     id: 'ha',
     color: '#F7C8D6',
     title: 'Hamrahan Atebba Co.',
@@ -153,7 +137,6 @@ const projectData = [
   },
 
   {
-    key: 16,
     id: 'board',
     color: '#B3444F',
     title: 'Self-balancing Robot',
