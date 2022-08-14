@@ -1,5 +1,6 @@
 import React from 'react';
 
+import '../css/Home.css';
 import scroll from '../media/down-arrow.png';
 
 const Home = () => {
