@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 
 import Edu from '../Edu';
 import Skill from '../Skill';
+import '../css/About.css';
 import python from '../media/logos/python.png';
 
 const About = () => {
@@ -12,8 +13,7 @@ const About = () => {
         <div className="text-wrapper">
           <div className="hello">Hello World,</div>
           <div className="me">
-            I&apos;m Faraz Atarodi, an electromechanical engineer and developer based in Leuven,
-            Belgium.
+            I&apos;m Faraz, an electromechanical engineer and developer based in Ghent, Belgium.
             <br />
             As an engineer, I have worked in several part-time engineering jobs while studying and I
             was a full-time on-site engineer in Siemens for one year between my studies.
