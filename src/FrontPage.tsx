@@ -1,8 +1,8 @@
 import React, { forwardRef, useEffect, useRef, useState } from 'react';
 
-import Doggo from './Doggo';
+import Duke from './Duke';
 import './css/FrontPage.css';
-import './css/Doggo.css';
+import './css/Duke.css';
 import './css/mobile.css';
 import './css/project.css';
 import Navigation from './Navigation';
@@ -96,7 +96,7 @@ const App = forwardRef(() => {
           TOUCH
         </div>
       </Contact>
-      <Doggo
+      <Duke
         left={dukeLeft}
         setLeft={setDukeLeft}
         mirror={dukeMirror}

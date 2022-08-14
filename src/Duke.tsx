@@ -1,11 +1,11 @@
 import React, { Dispatch, RefObject, SetStateAction, useEffect, useRef, useState } from 'react';
 
-import sittingImage from './media/doggo/0.png';
-import legsOpenImage from './media/doggo/1.png';
-import legsCloseImage from './media/doggo/2.png';
-import boneImage from './media/doggo/bone.png';
+import sittingImage from './media/duke/0.png';
+import legsOpenImage from './media/duke/1.png';
+import legsCloseImage from './media/duke/2.png';
+import boneImage from './media/duke/bone.png';
 
-const Doggo = ({
+const Duke = ({
   left,
   setLeft,
   mirror,
@@ -51,11 +51,11 @@ const Doggo = ({
     }
   }, [animation]);
 
-  const doggoCome = (e: { clientX: number; clientY: number; pageX: number; pageY: number }) => {
+  const dukeCome = (e: { clientX: number; clientY: number; pageX: number; pageY: number }) => {
     const container = containerRef.current;
-    const doggo = dukeRef.current;
+    const duke = dukeRef.current;
 
-    if (!container || !doggo) {
+    if (!container || !duke) {
       return;
     }
 
@@ -63,7 +63,7 @@ const Doggo = ({
     const mouseX = container.scrollLeft + e.clientX;
     const mouseY = e.clientY;
 
-    if (doggo!.offsetLeft < mouseX) {
+    if (duke!.offsetLeft < mouseX) {
       setMirror(false);
     } else {
       setMirror(true);
@@ -82,12 +82,12 @@ const Doggo = ({
 
   return (
     <div
-      className="doggo-div"
+      className="duke-div"
       onMouseMove={(e) => {
-        doggoCome(e);
+        dukeCome(e);
       }}>
       <div
-        className="doggo"
+        className="duke"
         onClick={() => window.open('https://www.google.com/search?q=samoyed')}
         style={{
           left: `${left}px`,
@@ -97,14 +97,14 @@ const Doggo = ({
         {moving ? (
           legsOpen ? (
             <div
-              className="doggo-image"
+              className="duke-image"
               style={{
                 backgroundImage: `url(${legsOpenImage})`
               }}
             />
           ) : (
             <div
-              className="doggo-image"
+              className="duke-image"
               style={{
                 backgroundImage: `url(${legsCloseImage})`
               }}
@@ -112,7 +112,7 @@ const Doggo = ({
           )
         ) : (
           <div
-            className="doggo-image"
+            className="duke-image"
             style={{
               backgroundImage: `url(${sittingImage})`
             }}
@@ -134,4 +134,4 @@ const Doggo = ({
   );
 };
 
-export default Doggo;
+export default Duke;
