@@ -3,6 +3,7 @@ import React, { ReactNode } from 'react';
 import ContactForm from '../ContactForm';
 import cv from '../media/Faraz Atarodi - CV.pdf';
 import linkArrow from '../media/diagonal-arrow.png';
+import '../css/Contact.css';
 
 const Contact = ({ children }: { children: ReactNode }) => {
   return (
@@ -94,7 +95,5 @@ const Contact = ({ children }: { children: ReactNode }) => {
     </section>
   );
 };
-
-Contact.displayName = 'Contact';
 
 export default Contact;
