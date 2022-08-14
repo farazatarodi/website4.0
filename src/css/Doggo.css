@@ -15,40 +15,16 @@
   height: 5rem;
   position: absolute;
   bottom: 2rem;
+  cursor: pointer;
+  transform: translateX(-50%);
+  transition: left 0.8s;
+}
+
+.doggo-image {
+  width: 100%;
+  height: 100%;
   background-size: contain;
   background-repeat: no-repeat;
-  transition: left 1s linear;
-  transform: translateX(50%) scaleX(1);
-  background-image: url('../media/doggo/0.png');
-  cursor: pointer;
-}
-
-@keyframes bg {
-  0% {
-    background-image: url('../media/doggo/1.png');
-  }
-
-  50% {
-    background-image: url('../media/doggo/2.png');
-  }
-
-  100% {
-    background-image: url('../media/doggo/1.png');
-  }
-}
-
-@keyframes ogbg {
-  100% {
-    background-image: url('../media/doggo/0.png');
-  }
-}
-
-.ground {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 2.5rem;
-  z-index: -1;
 }
 
 .bone {

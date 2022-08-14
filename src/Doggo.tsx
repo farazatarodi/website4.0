@@ -1,64 +1,135 @@
-import React from 'react';
+import React, { Dispatch, RefObject, SetStateAction, useEffect, useRef, useState } from 'react';
 
-import bone from './media/doggo/bone.png';
+import sittingImage from './media/doggo/0.png';
+import legsOpenImage from './media/doggo/1.png';
+import legsCloseImage from './media/doggo/2.png';
+import boneImage from './media/doggo/bone.png';
 
-// doggo follow function
-let timer: ReturnType<typeof setTimeout>;
+const Doggo = ({
+  left,
+  setLeft,
+  mirror,
+  setMirror,
+  moving,
+  setMoving,
+  legsOpen,
+  setLegsOpen,
+  containerRef
+}: {
+  left: number;
+  setLeft: Dispatch<SetStateAction<number>>;
+  mirror: boolean;
+  setMirror: Dispatch<SetStateAction<boolean>>;
+  moving: boolean;
+  setMoving: Dispatch<SetStateAction<boolean>>;
+  legsOpen: boolean;
+  setLegsOpen: Dispatch<SetStateAction<boolean>>;
+  containerRef: RefObject<HTMLDivElement | null>;
+}) => {
+  const dukeRef = useRef<HTMLDivElement>(null);
 
-const doggoCome = (e: { clientX: number; clientY: any; pageX: number; pageY: number }) => {
-  const doggo = document.querySelector('.doggo') as HTMLElement;
-  const container = document.querySelector('.scroll-container');
-  const bone = document.querySelector('.bone') as HTMLElement;
+  const [animation, setAnimation] = useState(false);
+  const [boneVisibility, setBoneVisibility] = useState(false);
+  const [boneLeft, setBoneLeft] = useState(0);
+  const [boneTop, setBoneTop] = useState(0);
 
-  // Get mouse position
-  const mouseX = container!.scrollLeft + e.clientX;
-  const mouseY = e.clientY;
+  let walkingAnimationTimer: ReturnType<typeof setInterval>;
+  useEffect(() => {
+    if (animation) {
+      clearInterval(walkingAnimationTimer);
 
-  // Check if within limits
-  if (
-    e.pageX < window.innerWidth - doggo!.offsetWidth &&
-    e.pageX > (window.innerWidth - doggo!.offsetWidth) * 0.05
-  ) {
-    // set doggo position
-    doggo!.style.left = mouseX + 'px';
+      setMoving(true);
+      walkingAnimationTimer = setInterval(() => {
+        setLegsOpen((legsOpen) => !legsOpen);
+      }, 100);
 
-    // set doggo animation
-    doggo!.style.animation = 'bg 0.5s steps(1) infinite alternate';
+      setTimeout(() => {
+        clearInterval(walkingAnimationTimer);
+        setMoving(false);
+        setAnimation(false);
+      }, 900);
+    }
+  }, [animation]);
 
-    // set doggo direction
-    if (doggo!.offsetLeft < mouseX) {
-      doggo!.style.transform = 'translate(-50%) scaleX(1)';
-    } else {
-      doggo!.style.transform = 'translate(-50%) scaleX(-1)';
+  const doggoCome = (e: { clientX: number; clientY: number; pageX: number; pageY: number }) => {
+    const container = containerRef.current;
+    const doggo = dukeRef.current;
+
+    if (!container || !doggo) {
+      return;
     }
 
-    // set timer for sitting position
-    clearTimeout(timer);
+    // Get mouse position
+    const mouseX = container.scrollLeft + e.clientX;
+    const mouseY = e.clientY;
 
-    timer = setTimeout(() => {
-      if (doggo.offsetLeft <= mouseX * 1.05 && doggo.offsetLeft >= mouseX * 0.95) {
-        doggo.style.animation = 'ogbg 0s linear';
-      }
-    }, 1100);
-  }
+    if (doggo!.offsetLeft < mouseX) {
+      setMirror(false);
+    } else {
+      setMirror(true);
+    }
+    setLeft(mouseX);
+    setAnimation(true);
 
-  //set bone position
-  if (e.pageY > window.innerHeight * 0.8) {
-    bone!.style.visibility = 'visible';
-    bone!.style.left = mouseX + 'px';
-    bone!.style.top = mouseY - window.innerHeight * 0.8 + 'px';
-  } else {
-    bone!.style.visibility = 'hidden';
-  }
-};
+    if (e.pageY > window.innerHeight * 0.8) {
+      setBoneVisibility(true);
+      setBoneLeft(mouseX);
+      setBoneTop(mouseY - window.innerHeight * 0.8);
+    } else {
+      setBoneVisibility(false);
+    }
+  };
 
-const Doggo = () => {
   return (
-    <div className="doggo-div" onMouseMove={doggoCome}>
+    <div
+      className="doggo-div"
+      onMouseMove={(e) => {
+        doggoCome(e);
+      }}>
       <div
         className="doggo"
-        onClick={() => window.open('https://www.google.com/search?q=samoyed')}></div>
-      <img className="bone" src={bone} alt=""></img>
+        onClick={() => window.open('https://www.google.com/search?q=samoyed')}
+        style={{
+          left: `${left}px`,
+          transform: mirror ? 'translateX(-50%) scaleX(-1)' : ' translateX(-50%)'
+        }}
+        ref={dukeRef}>
+        {moving ? (
+          legsOpen ? (
+            <div
+              className="doggo-image"
+              style={{
+                backgroundImage: `url(${legsOpenImage})`
+              }}
+            />
+          ) : (
+            <div
+              className="doggo-image"
+              style={{
+                backgroundImage: `url(${legsCloseImage})`
+              }}
+            />
+          )
+        ) : (
+          <div
+            className="doggo-image"
+            style={{
+              backgroundImage: `url(${sittingImage})`
+            }}
+          />
+        )}
+      </div>
+
+      <img
+        className="bone"
+        src={boneImage}
+        alt=""
+        style={{
+          visibility: boneVisibility ? 'visible' : 'hidden',
+          left: `${boneLeft}px`,
+          top: `${boneTop}px`
+        }}
+      />
     </div>
   );
 };

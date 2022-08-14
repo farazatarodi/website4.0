@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 
 import ContactForm from '../ContactForm';
 import cv from '../media/Faraz Atarodi - CV.pdf';
 import linkArrow from '../media/diagonal-arrow.png';
 
-const Contact = () => {
+const Contact = ({ children }: { children: ReactNode }) => {
   return (
     <section id="contact" className="four">
       <div className="contact-wrapper">
@@ -90,15 +90,11 @@ const Contact = () => {
         </div>
       </div>
 
-      {/* get in touch bg */}
-      <div id="git1" className="git">
-        GET IN
-      </div>
-      <div id="git2" className="git">
-        TOUCH
-      </div>
+      {children}
     </section>
   );
 };
+
+Contact.displayName = 'Contact';
 
 export default Contact;
