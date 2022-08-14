@@ -30,7 +30,8 @@
         "alphabetize": { "order": "asc" }
       }
     ],
-    "import/no-anonymous-default-export": "error"
+    "import/no-anonymous-default-export": "error",
+    "no-console": ["error", { "allow": ["warn", "error"] }]
   },
   "settings": {
     "import/resolver": {
