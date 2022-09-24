@@ -1,14 +1,21 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { Dispatch, SetStateAction } from 'react';
 
-const Nav = () => {
+const Nav = ({
+  setShowProjectDetail
+}: {
+  setShowProjectDetail?: Dispatch<SetStateAction<boolean>>;
+}) => {
   return (
     <div className="header">
       <div className="sec1">
-        <Link to="/">HOME</Link>
+        <button
+          onClick={() => setShowProjectDetail && setShowProjectDetail(false)}
+          className="navigation-button">
+          &#8592; BACK
+        </button>
       </div>
       <div className="sec2">
-        <div>LEUVEN - BELGIUM</div>
+        <div>GHENT - BELGIUM</div>
       </div>
     </div>
   );

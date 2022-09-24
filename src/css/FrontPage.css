@@ -46,14 +46,16 @@ section {
   align-items: center;
 }
 
-.sec1 a {
+.navigation-button {
+  background: none;
+  border: none;
   position: relative;
   color: white;
   text-decoration: none;
   cursor: pointer;
 }
 
-.sec1 > a::before {
+.navigation-button::before {
   content: '';
   position: absolute;
   width: 100%;
@@ -67,7 +69,7 @@ section {
   transition: 0.2s linear;
 }
 
-.sec1 > a:hover::before {
+.navigation-button:hover::before {
   visibility: visible;
   transform: scaleX(1);
 }
