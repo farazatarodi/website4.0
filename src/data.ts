@@ -19,21 +19,21 @@ import vision from './media/bg/vision.png';
 // project data
 const projectData = [
   {
-    id: 'siemens',
+    id: 'Siemens',
     color: '#FF5420',
     title: 'Siemens Healthineers',
     bg: siemens,
     desc: 'One year of full-time job at Siemens Healthineers as an ultrasound engineer'
   },
   {
-    id: 'os',
+    id: 'OS',
     color: '#F48636',
     title: 'Omran Soule Co.',
     bg: os,
     desc: 'Part-time job at Omran Soule Co. as a python developer and full stack engineer'
   },
   {
-    id: 'robot',
+    id: 'Robot',
     color: '#F7EBE1',
     title: 'Robot Path Simulator',
     bg: robot,
@@ -41,7 +41,7 @@ const projectData = [
   },
 
   {
-    id: 'iran',
+    id: 'Iran',
     color: '#F7C69E',
     title: 'Iran Population Map',
     bg: iran,
@@ -49,7 +49,7 @@ const projectData = [
   },
 
   {
-    id: 'iot',
+    id: 'IoT',
     color: '#FECB4B',
     title: 'IoT Boards',
     bg: iot,
@@ -57,7 +57,7 @@ const projectData = [
   },
 
   {
-    id: 'bb',
+    id: 'BB',
     color: '#3D6033',
     title: 'Breaking Bad Characters',
     bg: bb,
@@ -65,7 +65,7 @@ const projectData = [
   },
 
   {
-    id: 'mc',
+    id: 'MC',
     color: '#7CBD6B',
     title: 'Minecraft Farm Wiki',
     bg: mc,
@@ -73,7 +73,7 @@ const projectData = [
   },
 
   {
-    id: 'vision',
+    id: 'Vision',
     color: '#2F9A80',
     title: 'Computer Vision and Smart Assistant',
     bg: vision,
@@ -81,7 +81,7 @@ const projectData = [
   },
 
   {
-    id: 'four',
+    id: 'Four',
     color: '#00FFCC',
     title: 'Personal Website v4.0',
     bg: four,
@@ -89,7 +89,7 @@ const projectData = [
   },
 
   {
-    id: 'qr',
+    id: 'QR',
     color: '#30D9D9',
     title: 'Object and QR code Detection',
     bg: qr,
@@ -97,7 +97,7 @@ const projectData = [
   },
 
   {
-    id: 'task',
+    id: 'Task',
     color: '#011936',
     title: 'Task Tracker',
     bg: task,
@@ -105,7 +105,7 @@ const projectData = [
   },
 
   {
-    id: 'two',
+    id: 'Two',
     color: '#323840',
     title: 'Personal Website v2.0',
     bg: two,
@@ -113,7 +113,7 @@ const projectData = [
   },
 
   {
-    id: 'disk',
+    id: 'Disk',
     color: '#A3ACBF',
     title: 'Disk Sorter',
     bg: disk,
@@ -121,7 +121,7 @@ const projectData = [
   },
 
   {
-    id: 'av',
+    id: 'AV',
     color: '#252140',
     title: 'Autonomous Vehicle Components',
     bg: av,
@@ -129,7 +129,7 @@ const projectData = [
   },
 
   {
-    id: 'ha',
+    id: 'HA',
     color: '#F7C8D6',
     title: 'Hamrahan Atebba Co.',
     bg: ha,
@@ -137,7 +137,7 @@ const projectData = [
   },
 
   {
-    id: 'board',
+    id: 'Board',
     color: '#B3444F',
     title: 'Self-balancing Robot',
     bg: board,
