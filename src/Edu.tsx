@@ -1,29 +1,11 @@
 import React from 'react';
 
-import kul from './media/logos/kuleuven.png';
-import sharif from './media/logos/sharif.png';
-
-const Edu = ({ id }: { id: string }) => {
-  let text = '';
-  let logoSrc;
-  let link = '';
-
-  if (id === 'KUL') {
-    text = 'M.Sc. in Electromechanical Engineering from KU Leuven';
-    logoSrc = kul;
-    link =
-      'https://onderwijsaanbod.kuleuven.be/opleidingen/e/CQ_52921897.htm#activetab=diploma_omschrijving';
-  } else if (id === 'Sharif') {
-    text = 'B.Sc. in Mechatronics Engineering from Sharif University of Technology';
-    logoSrc = sharif;
-    link = 'http://www.en.sharif.edu/';
-  }
-
+const Edu = ({ eduData }: { eduData: { text: string; logoSrc: string; link: string } }) => {
   return (
     <div>
-      <img src={logoSrc} alt="" />
+      <img src={eduData.logoSrc} alt="" />
       <a
-        href={link}
+        href={eduData.link}
         className="links"
         style={{
           fontSize: '1.2rem',
@@ -33,7 +15,7 @@ const Edu = ({ id }: { id: string }) => {
         }}
         target="_blank"
         rel="noreferrer">
-        {text}
+        {eduData.text}
       </a>
     </div>
   );

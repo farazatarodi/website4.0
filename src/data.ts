@@ -15,9 +15,11 @@ import robot from './media/bg/robot.png';
 import siemens from './media/bg/siemens.png';
 import task from './media/bg/task.png';
 import vision from './media/bg/vision.png';
+import kul from './media/logos/kuleuven.png';
+import sharif from './media/logos/sharif.png';
 
 // project data
-const projectData = [
+export const projectData = [
   {
     id: 'Siemens',
     color: '#FF5420',
@@ -145,4 +147,15 @@ const projectData = [
   }
 ];
 
-export default projectData;
+export const eduData = [
+  {
+    text: 'M.Sc. in Electromechanical Engineering from KU Leuven',
+    logoSrc: kul,
+    link: 'https://onderwijsaanbod.kuleuven.be/opleidingen/e/CQ_52921897.htm#activetab=diploma_omschrijving'
+  },
+  {
+    text: 'B.Sc. in Mechatronics Engineering from Sharif University of Technology',
+    logoSrc: sharif,
+    link: 'http://www.en.sharif.edu/'
+  }
+];

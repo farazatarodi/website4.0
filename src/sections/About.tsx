@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import Edu from '../Edu';
 import Skill from '../Skill';
 import '../css/About.css';
+import { eduData } from '../data';
 import python from '../media/logos/python.png';
 
 const About = () => {
@@ -78,8 +79,9 @@ const About = () => {
         {/* education div */}
         <div className="edu">
           <div className="edu-title">Education</div>
-          <Edu id="Sharif" />
-          <Edu id="KUL" />
+          {eduData.map((edu) => (
+            <Edu eduData={edu} key={edu.text} />
+          ))}
         </div>
       </div>
 
