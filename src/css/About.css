@@ -96,8 +96,7 @@
 }
 
 .logo {
-  display: none;
-  position: absolute;
+  position: fixed;
   z-index: -1;
   transform: translate(-50%, -50%);
   width: 4rem;

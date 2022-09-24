@@ -201,7 +201,7 @@ export const skillData = [
     logoSrc: java
   },
   {
-    text: 'C1',
+    text: 'C/C++',
     logoSrc: c
   },
   {
@@ -209,7 +209,7 @@ export const skillData = [
     logoSrc: vba
   },
   {
-    text: 'C2',
+    text: 'C#',
     logoSrc: c2
   },
   {

@@ -4,7 +4,6 @@ import Edu from '../Edu';
 import Skill from '../Skill';
 import '../css/About.css';
 import { eduData, skillData } from '../data';
-import python from '../media/logos/python.png';
 
 const About = () => {
   const [clicked, setClicked] = useState(false);
@@ -70,9 +69,6 @@ const About = () => {
           ))}
         </div>
       </div>
-
-      {/* skill bg logo */}
-      <img src={python} alt="" className="logo" />
     </section>
   );
 };

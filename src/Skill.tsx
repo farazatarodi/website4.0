@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const Skill = ({
   skillData,
@@ -7,41 +7,34 @@ const Skill = ({
   skillData: { logoSrc: string; text: string };
   showDivider: boolean;
 }) => {
+  const [isHovering, setIsHovering] = useState(false);
+  const [left, setLeft] = useState(0);
+  const [top, setTop] = useState(0);
+
+  const handleMoveLogo = (e: React.MouseEvent) => {
+    setLeft(e.pageX);
+    setTop(e.pageY);
+  };
+
   return (
-    <div>
+    <div style={{ position: 'static' }}>
       <span
         id={skillData.text}
-        onMouseOver={() => {
-          const skill = document.querySelector('#' + skillData.text) as HTMLElement;
-          const logo = document.querySelector('.logo') as HTMLImageElement;
-
-          // increase scale on hover
-          skill.style.transform = 'scale(1.2, 1.2)';
-
-          // set logo image
-          logo.src = skillData.logoSrc;
-        }}
-        onMouseLeave={() => {
-          const skill = document.querySelector('#' + skillData.text) as HTMLElement;
-
-          // decrease scale on leave
-          skill.style.transform = 'scale(1, 1)';
-
-          // hide logo cursor
-          const logo = document.querySelector('.logo') as HTMLImageElement;
-          logo.style.display = 'none';
-        }}
-        onMouseMove={(e) => {
-          const logo = document.querySelector('.logo') as HTMLImageElement;
-
-          // show and move logo cursor
-          logo.style.display = 'block';
-          logo.style.left = e.pageX + 'px';
-          logo.style.top = e.pageY + 'px';
-        }}>
+        onMouseOver={() => setIsHovering(true)}
+        onMouseLeave={() => setIsHovering(false)}
+        onMouseMove={(e) => handleMoveLogo(e)}
+        style={isHovering ? { transform: 'scale(1.2, 1.2)' } : { transform: 'scale(1, 1)' }}>
         {skillData.text}
       </span>
       {showDivider && <span> - </span>}
+      {isHovering && (
+        <img
+          src={skillData.logoSrc}
+          alt=""
+          className="logo"
+          style={{ left: `${left}px`, top: `${top}px` }}
+        />
+      )}
     </div>
   );
 };
