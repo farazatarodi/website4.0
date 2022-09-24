@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Project from '../Project';
+import Project from '../components/Project';
 import { projectData } from '../data';
 
 import '../css/Experiences.css';

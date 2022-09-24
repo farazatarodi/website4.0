@@ -1,7 +1,8 @@
 import React, { CSSProperties, useState, useEffect } from 'react';
 
-import ProjectDetailContainer from './components/ProjectDetailContainer';
-import linkArrow from './media/diagonal-arrow.png';
+import linkArrow from '../media/diagonal-arrow.png';
+
+import ProjectDetailContainer from './ProjectDetailContainer';
 
 const Project = ({
   projectContent
