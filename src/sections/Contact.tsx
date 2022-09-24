@@ -1,6 +1,6 @@
 import React, { ReactNode } from 'react';
 
-import ContactForm from '../ContactForm';
+import ContactForm from '../components/ContactForm';
 import cv from '../media/Faraz Atarodi - CV.pdf';
 import linkArrow from '../media/diagonal-arrow.png';
 import '../css/Contact.css';
