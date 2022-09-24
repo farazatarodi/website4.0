@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 
-import ReactRouterRoutes from './Routes';
+import FrontPage from './FrontPage';
 
 const App = () => {
   useEffect(() => {
@@ -20,7 +20,7 @@ const App = () => {
 
   return (
     <div>
-      <ReactRouterRoutes />
+      <FrontPage />
     </div>
   );
 };
