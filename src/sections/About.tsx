@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import Edu from '../Edu';
+import Edu from '../components/Edu';
 import Skill from '../components/Skill';
 import '../css/About.css';
 import { eduData, skillData } from '../data';
