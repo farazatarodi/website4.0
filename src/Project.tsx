@@ -1,20 +1,18 @@
 import React, { CSSProperties, useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
 
+import ProjectDetailContainer from './components/ProjectDetailContainer';
 import linkArrow from './media/diagonal-arrow.png';
 
 const Project = ({
-  id,
-  color,
-  title,
-  bg,
-  desc
+  projectContent
 }: {
-  id: string;
-  color: string;
-  title: string;
-  bg: MediaImage;
-  desc: string;
+  projectContent: {
+    id: string;
+    color: string;
+    title: string;
+    bg: MediaImage;
+    desc: string;
+  };
 }) => {
   const [width, setWidth] = useState(4);
   const [backGroundImage, setBackGroundImage] = useState('');
@@ -23,6 +21,7 @@ const Project = ({
   const [descriptionVisibility, setDescriptionVisibility] =
     useState<CSSProperties['visibility']>('hidden');
   const [descriptionDisplay, setDescriptionDisplay] = useState('none');
+  const [showProjectDetail, setShowProjectDetail] = useState(false);
 
   let descriptionTimer: ReturnType<typeof setTimeout>;
   useEffect(() => {
@@ -42,11 +41,11 @@ const Project = ({
     setWidth(15);
     setBackGroundImage(
       'linear-gradient(135deg,' +
-        color +
+        projectContent.color +
         ' 0% ,' +
-        color +
+        projectContent.color +
         ' 35%, rgba(0,0,0,0) 100%), url("' +
-        bg +
+        projectContent.bg +
         '")'
     );
     setTitleRotate('rotate(0deg) translateY(120%)');
@@ -63,21 +62,35 @@ const Project = ({
   return (
     <div
       className="project"
-      style={{ backgroundColor: color, width: `${width}%`, backgroundImage: backGroundImage }}
-      onMouseOver={handleExpand}
+      style={{
+        backgroundColor: projectContent.color,
+        width: `${width}%`,
+        backgroundImage: backGroundImage
+      }}
+      onMouseEnter={handleExpand}
       onMouseLeave={handleShrink}>
       <div className="project-title" style={{ transform: titleRotate }}>
-        {title}
+        {projectContent.title}
       </div>
       <div
         className="project-description"
         style={{ visibility: descriptionVisibility, display: descriptionDisplay }}>
-        {desc}
+        {projectContent.desc}
         <br />
-        <Link
-          to={`/${id}`}
+        <button
+          onClick={() => {
+            handleShrink();
+            setShowProjectDetail(true);
+          }}
           className="links"
-          style={{ fontSize: '1rem', fontWeight: '400', lineHeight: '3rem' }}>
+          style={{
+            fontSize: '1rem',
+            fontWeight: '400',
+            marginTop: '1rem',
+            background: 'none',
+            border: 'none',
+            textShadow: '-1px 1px 5px rgb(0 0 0 / 30%), 1px -1px 5px rgb(0 0 0 / 30%)'
+          }}>
           Read More
           <img
             src={linkArrow}
@@ -85,8 +98,14 @@ const Project = ({
             className="link-arrow"
             style={{ height: '0.7rem', width: '0.7rem' }}
           />
-        </Link>
+        </button>
       </div>
+      {showProjectDetail && (
+        <ProjectDetailContainer
+          projectId={projectContent.id}
+          setShowProjectDetail={setShowProjectDetail}
+        />
+      )}
     </div>
   );
 };

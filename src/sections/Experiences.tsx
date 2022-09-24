@@ -10,20 +10,8 @@ const Experiences = () => {
     <section className="three" id="experiences">
       <div className="project-wrapper">
         {projectData.map(
-          ({
-            id,
-            color,
-            title,
-            bg,
-            desc
-          }: {
-            id: string;
-            color: string;
-            title: string;
-            bg: MediaImage;
-            desc: string;
-          }) => (
-            <Project key={id} id={id} color={color} title={title} bg={bg} desc={desc} />
+          (project: { id: string; color: string; title: string; bg: MediaImage; desc: string }) => (
+            <Project projectContent={project} key={project.id} />
           )
         )}
       </div>
