@@ -5,11 +5,11 @@ import './css/FrontPage.css';
 import './css/Duke.css';
 import './css/mobile.css';
 import './css/project.css';
-import Navigation from './Navigation';
 import About from './Sections/About';
 import Contact from './Sections/Contact';
 import Experiences from './Sections/Experiences';
 import Home from './Sections/Home';
+import Navigation from './components/Navigation';
 
 const App = forwardRef(() => {
   const containerRef = useRef<HTMLDivElement | null>(null);
