@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import Edu from '../Edu';
 import Skill from '../Skill';
 import '../css/About.css';
-import { eduData } from '../data';
+import { eduData, skillData } from '../data';
 import python from '../media/logos/python.png';
 
 const About = () => {
@@ -52,27 +52,13 @@ const About = () => {
 
           {/* skills components */}
           <div className="skills">
-            <Skill id="Python" />
-            <span> - </span>
-            <Skill id="React" />
-            <span> - </span>
-            <Skill id="JavaScript" />
-            <span> - </span>
-            <Skill id="CSS" />
-            <span> - </span>
-            <Skill id="HTML" />
-            <span> - </span>
-            <Skill id="PHP" />
-            <span> - </span>
-            <Skill id="Java" />
-            <span> - </span>
-            <Skill id="C1" />
-            <span> - </span>
-            <Skill id="VBA" />
-            <span> - </span>
-            <Skill id="C2" />
-            <span> - </span>
-            <Skill id="Unity" />
+            {skillData.map((skill, index) => (
+              <Skill
+                skillData={skill}
+                key={skill.text}
+                showDivider={index !== skillData.length - 1}
+              />
+            ))}
           </div>
         </div>
 

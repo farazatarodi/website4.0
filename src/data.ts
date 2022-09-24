@@ -15,8 +15,19 @@ import robot from './media/bg/robot.png';
 import siemens from './media/bg/siemens.png';
 import task from './media/bg/task.png';
 import vision from './media/bg/vision.png';
+import c2 from './media/logos/c#.png';
+import c from './media/logos/c.png';
+import css from './media/logos/css.png';
+import html from './media/logos/html.png';
+import java from './media/logos/java.png';
+import js from './media/logos/js.png';
 import kul from './media/logos/kuleuven.png';
+import php from './media/logos/php.png';
+import python from './media/logos/python.png';
+import react from './media/logos/react.png';
 import sharif from './media/logos/sharif.png';
+import unity from './media/logos/unity.png';
+import vba from './media/logos/vba.png';
 
 // project data
 export const projectData = [
@@ -157,5 +168,52 @@ export const eduData = [
     text: 'B.Sc. in Mechatronics Engineering from Sharif University of Technology',
     logoSrc: sharif,
     link: 'http://www.en.sharif.edu/'
+  }
+];
+
+export const skillData = [
+  {
+    text: 'Python',
+    logoSrc: python
+  },
+  {
+    text: 'React',
+    logoSrc: react
+  },
+  {
+    text: 'JavaScript',
+    logoSrc: js
+  },
+  {
+    text: 'CSS',
+    logoSrc: css
+  },
+  {
+    text: 'HTML',
+    logoSrc: html
+  },
+  {
+    text: 'PHP',
+    logoSrc: php
+  },
+  {
+    text: 'Java',
+    logoSrc: java
+  },
+  {
+    text: 'C1',
+    logoSrc: c
+  },
+  {
+    text: 'VBA',
+    logoSrc: vba
+  },
+  {
+    text: 'C2',
+    logoSrc: c2
+  },
+  {
+    text: 'Unity',
+    logoSrc: unity
   }
 ];
