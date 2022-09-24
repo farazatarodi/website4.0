@@ -1,9 +1,9 @@
 import React, { Dispatch, RefObject, SetStateAction, useEffect, useRef, useState } from 'react';
 
-import sittingImage from './media/duke/0.png';
-import legsOpenImage from './media/duke/1.png';
-import legsCloseImage from './media/duke/2.png';
-import boneImage from './media/duke/bone.png';
+import sittingImage from '../media/duke/0.png';
+import legsOpenImage from '../media/duke/1.png';
+import legsCloseImage from '../media/duke/2.png';
+import boneImage from '../media/duke/bone.png';
 
 const Duke = ({
   left,
