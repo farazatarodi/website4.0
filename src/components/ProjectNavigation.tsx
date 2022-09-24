@@ -1,6 +1,6 @@
 import React, { Dispatch, SetStateAction } from 'react';
 
-const Nav = ({
+const ProjectNavigation = ({
   setShowProjectDetail
 }: {
   setShowProjectDetail?: Dispatch<SetStateAction<boolean>>;
@@ -21,4 +21,4 @@ const Nav = ({
   );
 };
 
-export default Nav;
+export default ProjectNavigation;

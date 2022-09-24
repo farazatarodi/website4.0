@@ -3,7 +3,7 @@ import React, { Dispatch, SetStateAction } from 'react';
 import '../css/ProjectDetailContainer.css';
 import * as ProjectComponents from '../Projects';
 
-import Nav from './Nav';
+import ProjectNavigation from './ProjectNavigation';
 
 const ProjectDetailContainer = ({
   projectId,
@@ -17,7 +17,7 @@ const ProjectDetailContainer = ({
 
   return (
     <div className="project-detail-container">
-      <Nav setShowProjectDetail={setShowProjectDetail} />
+      <ProjectNavigation setShowProjectDetail={setShowProjectDetail} />
       <ProjectDetail />
     </div>
   );
