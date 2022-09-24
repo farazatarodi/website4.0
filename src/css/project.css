@@ -8,6 +8,22 @@
   width: 100%;
   margin-top: 10vh;
   padding: 5rem;
+  background-color: var(--bg);
+  animation-name: move-in;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-out;
+  animation-iteration-count: 1;
+  height: 90%;
+}
+
+@keyframes move-in {
+  0% {
+    transform: translateY(100%);
+  }
+
+  100% {
+    transform: translateY(0%);
+  }
 }
 
 .pr-row1 {
@@ -17,6 +33,7 @@
   justify-content: space-between;
   padding-bottom: 2rem;
   overflow-x: hidden;
+  height: fit-content;
 }
 
 .pr-col1 {
@@ -28,6 +45,7 @@
   position: relative;
   width: 35%;
   overflow-x: hidden;
+  z-index: 0;
 }
 
 .pr-title-image {
