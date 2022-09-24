@@ -2,7 +2,8 @@ import React, { Dispatch, SetStateAction } from 'react';
 
 import '../css/ProjectDetailContainer.css';
 import * as ProjectComponents from '../Projects';
-import Nav from '../Projects/Nav';
+
+import Nav from './Nav';
 
 const ProjectDetailContainer = ({
   projectId,
