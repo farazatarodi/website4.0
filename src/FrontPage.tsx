@@ -6,10 +6,10 @@ import './css/Duke.css';
 import './css/mobile.css';
 import './css/project.css';
 import Navigation from './Navigation';
-import About from './sections/About';
-import Contact from './sections/Contact';
-import Experiences from './sections/Experiences';
-import Home from './sections/Home';
+import About from './Sections/About';
+import Contact from './Sections/Contact';
+import Experiences from './Sections/Experiences';
+import Home from './Sections/Home';
 
 const App = forwardRef(() => {
   const containerRef = useRef<HTMLDivElement | null>(null);
